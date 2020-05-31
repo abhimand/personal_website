@@ -78,7 +78,7 @@ export default function Header(props) {
                     
                     className={classes.mainMessage}
                     >
-                        Food for Thought                
+                        --Under Construction--                
             </Typography>
             </Paper>
         </React.Fragment>

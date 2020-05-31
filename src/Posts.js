@@ -24,9 +24,9 @@ export default function FeaturedPost(props) {
 
     <React.Fragment>
 
-        <Grid container className={classes.gridPosts} style={{ backgroundColor: 'lightgrey'}} justify="center" >
+        <Grid container className={classes.gridPosts} style={{ backgroundColor: 'lightgrey'}} justify="center" alignContent="center">
             <Grid item xs={'auto'} md={3}>
-                <Paper className={classes.paper} component='img' src={post.image}/> 
+                <Paper className={classes.paper} style={{ height: 150, width: 225, position: "relative"}} component='img' src={post.image}/> 
             </Grid>
             <Grid item xs={'auto'} md={3}>
                 <Box component="span" display="inline">

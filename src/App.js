@@ -5,6 +5,10 @@ import './App.css';
 import fujtisu from './images/fujitsu.jpg'
 import eerc from './images/eerc.jpg'
 import deloitte from './images/deloitte.jpg'
+import tamiu from './images/tamiu.jpg'
+import uhs from './images/uhs.jpg'
+
+
 
 
 
@@ -59,10 +63,28 @@ const posts = [
     image: eerc,
     imageText: 'Image Text',
   },
+  {
+    title: 'TAMIU',
+    position: 'Researcher',
+    date: 'May 2017 - August 2017',
+    location: 'Laredo, TX',
+    description: 'Worked with Deepak Ganta and his team on optoelectronic technology with textiles',
+    image: tamiu,
+    imageText: 'Image Text',
+  },
+  {
+    title: 'United High School',
+    position: '',
+    date: 'Class of 2016',
+    location: 'Laredo, TX',
+    description: 'Graduated from high school rank 9 out of 1014, was in Robotics, NHS, MUN, and other orgs.',
+    image: uhs,
+    imageText: 'Image Text',
+  },
 
 ];
 
-const aboutMeDescription = 'Hello! My name is Abhishek. I was inspired to create this website by my good friend Henry Vuong. I created this website to showcase myself in the best way possible: by bragging. ';
+const aboutMeDescription = 'Hello! My name is Abhishek. I was inspired to create this website by my good friend Henry Vuong. I created this website to showcase myself. And perhaps other things as well.';
 const aboutMeTitle = 'About Me...'
 
 function App() {
@@ -81,13 +103,6 @@ function App() {
             <Posts key={post.title} post={post} />
           ))}
         </Box>
-        {/* <!-- The core Firebase JS SDK is always required and must be listed first --> */}
-        <script src="/__/firebase/7.14.6/firebase-app.js"></script>
-        {/* <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries --> */}
-        <script src="/__/firebase/7.14.6/firebase-analytics.js"></script>
-        {/* Initialize Firebase */}
-        <script src="/__/firebase/init.js"></script>
     </body>
     <Footer/>
     </React.Fragment>
