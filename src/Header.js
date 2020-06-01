@@ -6,6 +6,11 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Link from '@material-ui/core/Link'
 import Paper from '@material-ui/core/Paper'
 
+import Fade from '@material-ui/core/Fade'
+
+import Grow from '@material-ui/core/Grow'
+
+
 const useStyles = makeStyles((theme) => ({
     toolbar: {
         paddingBottom: theme.spacing(2),
@@ -43,44 +48,48 @@ export default function Header(props) {
 
     return (
         <React.Fragment className={classes.frag}>
-            <Paper
-            variant="outlined"
-            className={classes.paperImage} 
-            square="true"
-            style={{ height: "fill", width: "fill", position: "relative"}}
-            >
-            <Toolbar component="nav" variant="dense" className={classes.toolbar}>
-                <Typography
-                    component="h2"
-                    variant="h5"
-                    align="left"
-                    noWrap
-                    className={classes.toolbarTitle}>
-                        {title}
-                </Typography>
-                {sections.map((section) => (
-                    <Link
-                    color="inherit"
-                    noWrap
-                    key={section.title}
-                    variant="body2"
-                    href={section.url}
-                    className={classes.toolbarLink}
-                    >
-                        {section.title}
-                    </Link>
-                ))}
-            </Toolbar>
-            <Typography
-                    variant="h2"
-                    align="center"
-                    color="inherit"
-                    
-                    className={classes.mainMessage}
-                    >
-                        --Under Construction--                
-            </Typography>
-            </Paper>
+            <Fade in timeout={2500}>
+                <Paper
+                variant="outlined"
+                className={classes.paperImage} 
+                square="true"
+                style={{ height: "fill", width: "fill", position: "relative"}}
+                >
+            
+                <Toolbar component="nav" variant="dense" className={classes.toolbar}>
+                    <Typography
+                        component="h2"
+                        variant="h5"
+                        align="left"
+                        noWrap
+                        className={classes.toolbarTitle}>
+                            {title}
+                    </Typography>
+                    {sections.map((section) => (
+                        <Link
+                        color="inherit"
+                        noWrap
+                        key={section.title}
+                        variant="body2"
+                        href={section.url}
+                        className={classes.toolbarLink}
+                        >
+                            {section.title}
+                        </Link>
+                    ))}
+                </Toolbar>
+                <Grow in timeout={4000}>
+                    <Typography
+                            variant="h2"
+                            align="center"
+                            color="inherit"
+                            className={classes.mainMessage}
+                            >
+                                --Under Construction--                
+                    </Typography>
+                </Grow>
+                </Paper>
+            </Fade>
         </React.Fragment>
     )
 }

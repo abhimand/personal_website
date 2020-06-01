@@ -5,6 +5,8 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
+import Grow from '@material-ui/core/Grow';
+
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -16,17 +18,23 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function FeaturedPost(props) {
+
+
+
+export default function Posts(props) {
   const classes = useStyles();
   const { post } = props;
 
   return (
 
     <React.Fragment>
-
+        <div onScroll></div>
+        
         <Grid container className={classes.gridPosts} style={{ backgroundColor: 'lightgrey'}} justify="center" alignContent="center">
             <Grid item xs={'auto'} md={3}>
-                <Paper className={classes.paper} style={{ height: 150, width: 225, position: "relative"}} component='img' src={post.image}/> 
+                <Grow in timeout={2500}>
+                    <Paper className={classes.paper} style={{ height: 150, width: 225, position: "relative"}} component='img' src={post.image}/> 
+                </Grow>
             </Grid>
             <Grid item xs={'auto'} md={3}>
                 <Box component="span" display="inline">
@@ -49,10 +57,11 @@ export default function FeaturedPost(props) {
                 </Box>
             </Grid>
         </Grid>
+       
     </React.Fragment> 
   );
 }
 
-FeaturedPost.propTypes = {
+Posts.propTypes = {
   post: PropTypes.object,
 };
