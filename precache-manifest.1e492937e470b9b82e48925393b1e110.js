@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "27c365a71d9126ebbd1fb874ae3d7e7e",
+    "revision": "6824cc4accc54838c96688e7f65f137f",
     "url": "/my-app/index.html"
   },
   {
-    "revision": "5f3fb9baa5ae8f5d9e75",
+    "revision": "f4e59425d1505a681eae",
     "url": "/my-app/static/css/main.f78f7e94.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/my-app/static/js/2.67fca905.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5f3fb9baa5ae8f5d9e75",
-    "url": "/my-app/static/js/main.f0546ff9.chunk.js"
+    "revision": "f4e59425d1505a681eae",
+    "url": "/my-app/static/js/main.7d83f652.chunk.js"
   },
   {
     "revision": "660024b2ea62aa0a0b7b",
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/my-app/static/media/fujitsu.4d934907.jpg"
   },
   {
-    "revision": "da6cca87c4089328db4a9fd01dde838a",
-    "url": "/my-app/static/media/profPic.da6cca87.JPG"
+    "revision": "7878bec5b747e1a87264c58acf1b58ab",
+    "url": "/my-app/static/media/profPic.7878bec5.JPG"
   },
   {
     "revision": "cb43f7423f667ec5e79028cfcf143008",
