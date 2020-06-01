@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/my-app/static/css/main.f78f7e94.chunk.css",
-    "main.js": "/my-app/static/js/main.9e5a6ef2.chunk.js",
-    "main.js.map": "/my-app/static/js/main.9e5a6ef2.chunk.js.map",
+    "main.js": "/my-app/static/js/main.67ea983f.chunk.js",
+    "main.js.map": "/my-app/static/js/main.67ea983f.chunk.js.map",
     "runtime-main.js": "/my-app/static/js/runtime-main.5119dbb0.js",
     "runtime-main.js.map": "/my-app/static/js/runtime-main.5119dbb0.js.map",
-    "static/js/2.0bc3ad9b.chunk.js": "/my-app/static/js/2.0bc3ad9b.chunk.js",
-    "static/js/2.0bc3ad9b.chunk.js.map": "/my-app/static/js/2.0bc3ad9b.chunk.js.map",
+    "static/js/2.c8ea444f.chunk.js": "/my-app/static/js/2.c8ea444f.chunk.js",
+    "static/js/2.c8ea444f.chunk.js.map": "/my-app/static/js/2.c8ea444f.chunk.js.map",
     "index.html": "/my-app/index.html",
-    "precache-manifest.16ebf83a836539f19b97cba0964ae053.js": "/my-app/precache-manifest.16ebf83a836539f19b97cba0964ae053.js",
+    "precache-manifest.813ce98cbcce6c0d9282f0d9865b87fc.js": "/my-app/precache-manifest.813ce98cbcce6c0d9282f0d9865b87fc.js",
     "service-worker.js": "/my-app/service-worker.js",
     "static/css/main.f78f7e94.chunk.css.map": "/my-app/static/css/main.f78f7e94.chunk.css.map",
-    "static/js/2.0bc3ad9b.chunk.js.LICENSE.txt": "/my-app/static/js/2.0bc3ad9b.chunk.js.LICENSE.txt",
+    "static/js/2.c8ea444f.chunk.js.LICENSE.txt": "/my-app/static/js/2.c8ea444f.chunk.js.LICENSE.txt",
     "static/media/backgroundImage.jpg": "/my-app/static/media/backgroundImage.e5a15e6c.jpg",
     "static/media/deloitte.jpg": "/my-app/static/media/deloitte.769d10cf.jpg",
     "static/media/fujitsu.jpg": "/my-app/static/media/fujitsu.4d934907.jpg",
@@ -21,8 +21,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.5119dbb0.js",
-    "static/js/2.0bc3ad9b.chunk.js",
+    "static/js/2.c8ea444f.chunk.js",
     "static/css/main.f78f7e94.chunk.css",
-    "static/js/main.9e5a6ef2.chunk.js"
+    "static/js/main.67ea983f.chunk.js"
   ]
 }
