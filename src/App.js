@@ -8,10 +8,6 @@ import deloitte from './images/deloitte.jpg'
 import tamiu from './images/tamiu.jpg'
 import uhs from './images/uhs.jpg'
 
-
-
-
-
 import Header from './Header';
 import Body from './Body';
 import Posts from './Posts';

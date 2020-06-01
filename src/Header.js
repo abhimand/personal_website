@@ -1,13 +1,15 @@
 import React from 'react';
+
 import { makeStyles } from '@material-ui/core/styles';
+
 import backgroundImage from './images/backgroundImage.jpg'
+
 import Typography from '@material-ui/core/Typography'
 import Toolbar from '@material-ui/core/Toolbar'
 import Link from '@material-ui/core/Link'
 import Paper from '@material-ui/core/Paper'
 
 import Fade from '@material-ui/core/Fade'
-
 import Grow from '@material-ui/core/Grow'
 
 

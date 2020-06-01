@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import VizSensor from 'react-visibility-sensor'
 import PropTypes from 'prop-types';
+
 import { makeStyles } from '@material-ui/core/styles';
+
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
+
 import Grow from '@material-ui/core/Grow';
 
 
@@ -20,43 +24,48 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-
 export default function Posts(props) {
   const classes = useStyles();
   const { post } = props;
+  let [active, setActive] = useState(false);
 
   return (
 
     <React.Fragment>
-        <div onScroll></div>
-        
-        <Grid container className={classes.gridPosts} style={{ backgroundColor: 'lightgrey'}} justify="center" alignContent="center">
-            <Grid item xs={'auto'} md={3}>
-                <Grow in timeout={2500}>
-                    <Paper className={classes.paper} style={{ height: 150, width: 225, position: "relative"}} component='img' src={post.image}/> 
-                </Grow>
-            </Grid>
-            <Grid item xs={'auto'} md={3}>
-                <Box component="span" display="inline">
-                    <Typography component="h2" variant="h5">
-                        {post.title}
-                    </Typography>
-                    
-                    <Typography variant="subtitle1" color="textSecondary">
-                        {post.position}
-                    </Typography>
-                    <Typography variant="subtitle1" paragraph>
-                        {post.date}
-                    </Typography>
-                    <Typography variant="subtitle1" paragraph>
-                        {post.location}
-                    </Typography>
-                    <Typography variant="subtitle1" paragraph>
-                        {post.description}
-                    </Typography>
-                </Box>
-            </Grid>
-        </Grid>
+        <VizSensor onChange ={(isVisible) => {
+            setActive(isVisible); 
+        }}
+        >
+            <Grow in={active} timeout={3000}>
+                <Grid container className={classes.gridPosts} style={{ backgroundColor: 'lightgrey'}} justify="center" alignContent="center">
+                    <Grid item xs={'auto'} md={3}>
+                        <Grow in timeout={2500}>
+                            <Paper className={classes.paper} style={{ height: 150, width: 225, position: "relative"}} component='img' src={post.image}/> 
+                        </Grow>
+                    </Grid>
+                    <Grid item xs={'auto'} md={3}>
+                        <Box component="span" display="inline">
+                            <Typography component="h2" variant="h5">
+                                {post.title}
+                            </Typography>
+                            
+                            <Typography variant="subtitle1" color="textSecondary">
+                                {post.position}
+                            </Typography>
+                            <Typography variant="subtitle1" paragraph>
+                                {post.date}
+                            </Typography>
+                            <Typography variant="subtitle1" paragraph>
+                                {post.location}
+                            </Typography>
+                            <Typography variant="subtitle1" paragraph>
+                                {post.description}
+                            </Typography>
+                        </Box>
+                    </Grid>
+                </Grid>
+            </Grow>
+        </VizSensor>
        
     </React.Fragment> 
   );
