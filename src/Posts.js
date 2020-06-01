@@ -32,39 +32,37 @@ export default function Posts(props) {
   return (
 
     <React.Fragment>
-        <VizSensor onChange ={(isVisible) => {
+        <VizSensor onChange={(isVisible) => {
             setActive(isVisible); 
         }}
         >
-            <Grow in={active} timeout={3000}>
-                <Grid container className={classes.gridPosts} style={{ backgroundColor: 'lightgrey'}} justify="center" alignContent="center">
-                    <Grid item xs={'auto'} md={3}>
-                        <Grow in timeout={2500}>
-                            <Paper className={classes.paper} style={{ height: 150, width: 225, position: "relative"}} component='img' src={post.image}/> 
-                        </Grow>
-                    </Grid>
-                    <Grid item xs={'auto'} md={3}>
-                        <Box component="span" display="inline">
-                            <Typography component="h2" variant="h5">
-                                {post.title}
-                            </Typography>
-                            
-                            <Typography variant="subtitle1" color="textSecondary">
-                                {post.position}
-                            </Typography>
-                            <Typography variant="subtitle1" paragraph>
-                                {post.date}
-                            </Typography>
-                            <Typography variant="subtitle1" paragraph>
-                                {post.location}
-                            </Typography>
-                            <Typography variant="subtitle1" paragraph>
-                                {post.description}
-                            </Typography>
-                        </Box>
-                    </Grid>
+            <Grid container className={classes.gridPosts} style={{ backgroundColor: 'lightgrey'}} justify="center" alignContent="center">
+                <Grid item xs={'auto'} md={3}>
+                    <Grow in={active} timeout={3000}>
+                        <Paper className={classes.paper} style={{ height: 150, width: 225, position: "relative"}} component='img' src={post.image}/> 
+                    </Grow>
                 </Grid>
-            </Grow>
+                <Grid item xs={'auto'} md={3}>
+                    <Box component="span" display="inline">
+                        <Typography component="h2" variant="h5">
+                            {post.title}
+                        </Typography>
+                        
+                        <Typography variant="subtitle1" color="textSecondary">
+                            {post.position}
+                        </Typography>
+                        <Typography variant="subtitle1" paragraph>
+                            {post.date}
+                        </Typography>
+                        <Typography variant="subtitle1" paragraph>
+                            {post.location}
+                        </Typography>
+                        <Typography variant="subtitle1" paragraph>
+                            {post.description}
+                        </Typography>
+                    </Box>
+                </Grid>
+            </Grid>
         </VizSensor>
        
     </React.Fragment> 
