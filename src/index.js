@@ -7,9 +7,9 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter>
+    {/* <HashRouter> */}
       <App />
-    </HashRouter>
+    {/* </HashRouter> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
