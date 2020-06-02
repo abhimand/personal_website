@@ -1,0 +1,4 @@
+custom domain notes:
+- create CNAME with website
+- make sure package.json has homepage to custom domain
+- add necessary ips to google domains in DNS for custom domain

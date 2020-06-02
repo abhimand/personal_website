@@ -45,7 +45,7 @@ export default function Body(props) {
 
   return (
     <React.Fragment>
-      <Grid container className={classes.gridBody} style={{ backgroundColor: '#000011'}}  justify="center">
+      <Grid container className={classes.gridBody} style={{ background: 'linear-gradient(45deg, #000005 50%, #000035 90%)'}}  justify="center">
         <Grid item xs={'auto'}>
           <Paper className={classes.profilePicture}/>>
         </Grid>

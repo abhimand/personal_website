@@ -2,7 +2,8 @@ import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 
-import backgroundImage from './images/backgroundImage.jpg'
+import backgroundImage from './images/nyc.jpg'
+
 
 import Typography from '@material-ui/core/Typography'
 import Toolbar from '@material-ui/core/Toolbar'
@@ -31,18 +32,21 @@ const useStyles = makeStyles((theme) => ({
     mainMessage: {
         color: theme.palette.common.white,
         // padding: theme.spacing(40), 
-        paddingTop: theme.spacing(50),
-        paddingBottom: theme.spacing(50),
+        paddingTop: theme.spacing(40),
+        paddingBottom: theme.spacing(60),
 
     },
     paperImage: {
         background: `url(${backgroundImage})`,
+        // background: 'linear-gradient(45deg, #000035 20%, #AA0303 90%)',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         border: theme.spacing(0),
     },
   }));
+
+  //30,30,95
 
 export default function Header(props) {
     const {sections, title} = props;
@@ -55,7 +59,7 @@ export default function Header(props) {
                 variant="outlined"
                 className={classes.paperImage} 
                 square="true"
-                style={{ height: "fill", width: "fill", position: "relative"}}
+                style={{ position: "relative"}}
                 >
             
                 <Toolbar component="nav" variant="dense" className={classes.toolbar}>

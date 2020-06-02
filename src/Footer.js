@@ -21,6 +21,7 @@ export default function Footer() {
         <Typography style={{ color: 'white'}} variant="subtitle1" paragraph>
               Made with React, Material-UI, and constant frustration
         </Typography>
+        Icons made by <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
     </Grid>
     </React.Fragment>
   );
