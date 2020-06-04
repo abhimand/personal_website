@@ -1,18 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // import { makeStyles } from '@material-ui/core/styles';
 import './App.css';
-
-import fujtisu from './images/fujitsu.jpg'
 import eerc from './images/eerc.jpg'
 import deloitte from './images/deloitte.jpg'
 import tamiu from './images/tamiu.jpg'
 import uhs from './images/uhs.jpg'
-
+import fujitsu from './images/fujitsu.jpg'
 import Header from './Header';
 import Body from './Body';
 import Posts from './Posts';
 import Footer from './Footer';
-
+import About from './About';
 import Box from '@material-ui/core/Box';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
@@ -26,9 +25,12 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 // }));
 
 const headerSections = [
-    // { title: 'Food', url: '#' },
-    // { title: 'Thoughts', url: '#' },
-    // { title: 'Travel', url: '#' },
+    { title: 'Home', url: '/' },
+    { title: 'About', url: '/about' },
+    { title: 'Career', url: '#' },
+    { title: 'Food', url: '#' },
+    { title: 'Travel', url: '#' },
+
 ];
 
 const posts = [
@@ -47,7 +49,7 @@ const posts = [
     date: 'June 2019 - August 2019',
     location: 'Richardson, TX',
     description: 'I worked here as the Software Strategic Planner within the Corporate Planning Team of Fujitsu Network Communications Inc. ',
-    image: fujtisu,
+    image: fujitsu,
     imageText: 'Image Text',
   },
   {
@@ -89,19 +91,32 @@ function App() {
   return (
   <React.Fragment>
     <CssBaseline/>
-    <header className="App-header">
-      <Header title="A. E. Mandal" sections={headerSections} />
-    </header>
-    <body className="App-header">
-      <Body content={aboutMeDescription} title={aboutMeTitle} />
-        <Box component="span">
-          {posts.map((post) => (
-            <Posts key={post.title} post={post} />
-          ))}
-        </Box>
-    </body>
+    <Header title="abbyshacky" sections={headerSections} />
+    <BrowserRouter>
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={() => 
+            <div>
+              <Body content={aboutMeDescription} title={aboutMeTitle} />
+              <Box component="span">
+                {posts.map((post) => (
+                  <Posts key={post.title} post={post} />
+                ))}
+              </Box>
+            </div>
+          }
+          />
+        <Route
+          exact
+          path="/about"
+          component={About}
+          />
+      </Switch>
+    </BrowserRouter>
     <Footer/>
-    </React.Fragment>
+  </React.Fragment>
   );
 }
 

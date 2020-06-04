@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
 import VizSensor from 'react-visibility-sensor'
 import PropTypes from 'prop-types';
-
 import { makeStyles } from '@material-ui/core/styles';
-
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
-
 import Grow from '@material-ui/core/Grow';
-
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -22,15 +18,11 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-
-
 export default function Posts(props) {
   const classes = useStyles();
   const { post } = props;
   let [active, setActive] = useState(false);
-
   return (
-
     <React.Fragment>
         <VizSensor onChange={(isVisible) => {
             setActive(isVisible); 
@@ -39,10 +31,10 @@ export default function Posts(props) {
             <Grid container className={classes.gridPosts} style={{ backgroundColor: 'lightgrey'}} justify="center" alignContent="center">
                 <Grid item xs={'auto'} md={3}>
                     <Grow in={active} timeout={3000}>
-                        <Paper className={classes.paper} style={{ height: 150, width: 225, position: "relative"}} component='img' src={post.image}/> 
+                        <Paper className={classes.paper} style={{ height: 175, width: 250, position: "relative" }} component='img' src={post.image}/> 
                     </Grow>
                 </Grid>
-                <Grid item xs={'auto'} md={3}>
+                <Grid item xs={'auto'} md={3} justify="center">
                     <Box component="span" display="inline">
                         <Typography component="h2" variant="h5">
                             {post.title}
@@ -64,7 +56,6 @@ export default function Posts(props) {
                 </Grid>
             </Grid>
         </VizSensor>
-       
     </React.Fragment> 
   );
 }
