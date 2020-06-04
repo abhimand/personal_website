@@ -25,8 +25,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 // }));
 
 const headerSections = [
-    { title: 'Home', url: '/' },
-    { title: 'About', url: '/about' },
+    { title: 'Home', url: process.env.PUBLIC_URL + '/' },
+    { title: 'About', url: process.env.PUBLIC_URL + '/about' },
     { title: 'Career', url: '#' },
     { title: 'Food', url: '#' },
     { title: 'Travel', url: '#' },
@@ -96,7 +96,7 @@ function App() {
       <Switch>
         <Route
           exact
-          path="/"
+          path={process.env.PUBLIC_URL + "/"}
           render={() => 
             <div>
               <Body content={aboutMeDescription} title={aboutMeTitle} />
@@ -110,7 +110,7 @@ function App() {
           />
         <Route
           exact
-          path="/about"
+          path={process.env.PUBLIC_URL + "/about"}
           component={About}
           />
       </Switch>
