@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-// import { makeStyles } from '@material-ui/core/styles';
 import './App.css';
 import eerc from './images/eerc.jpg'
 import deloitte from './images/deloitte.jpg'
@@ -15,22 +14,12 @@ import About from './About';
 import Box from '@material-ui/core/Box';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-
-
-// const useStyles = makeStyles((theme) => ({
-//   gridApp: {
-//     padding: theme.spacing(4),
-//   },
-  
-// }));
-
 const headerSections = [
     { title: 'Home', url: process.env.PUBLIC_URL + '/' },
     { title: 'About', url: process.env.PUBLIC_URL + '/about' },
-    { title: 'Career', url: '#' },
-    { title: 'Food', url: '#' },
-    { title: 'Travel', url: '#' },
-
+    { title: 'Career', url: process.env.PUBLIC_URL + '/career' },
+    { title: 'Food', url: process.env.PUBLIC_URL + '/food' },
+    { title: 'Travel', url: process.env.PUBLIC_URL + '/travel' },
 ];
 
 const posts = [
@@ -86,7 +75,6 @@ const aboutMeDescription = 'Hello! My name is Abhishek. I was inspired to create
 const aboutMeTitle = 'About Me...'
 
 function App() {
-  // const classes = useStyles();
 
   return (
   <React.Fragment>
@@ -94,19 +82,29 @@ function App() {
     <Header title="abbyshacky" sections={headerSections} />
     <BrowserRouter>
       <Switch>
-        <Route
+        {/* Home Page */}
+        <Route 
           exact
           path={process.env.PUBLIC_URL + "/"}
           render={() => 
             <div>
               <Body content={aboutMeDescription} title={aboutMeTitle} />
-              <Box component="span">
+            </div>
+            }
+          />
+        {/* Career */}
+        <Route
+          exact
+          path={process.env.PUBLIC_URL + "/career"}
+          render={() => 
+            <div>
+              <Box component="div" style={{ background: 'linear-gradient(45deg, #999999 20%, #ffffff 90%)'}}>
                 {posts.map((post) => (
                   <Posts key={post.title} post={post} />
                 ))}
               </Box>
             </div>
-          }
+            }
           />
         <Route
           exact

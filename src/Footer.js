@@ -14,7 +14,7 @@ export default function Footer() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Grid container className={classes.gridBody} style={{ backgroundColor: '#000011'}} justify="center" >
+      <Grid container className={classes.gridBody} style={{ background: 'linear-gradient(90deg, #000000 50%, #000000 90%)'}} justify="center" >
           <Typography style={{ color: 'white'}} variant="subtitle1" paragraph>
                 Made with React, Material-UI, and constant frustration
           </Typography>

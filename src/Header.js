@@ -8,6 +8,11 @@ import Link from '@material-ui/core/Link'
 import Paper from '@material-ui/core/Paper'
 import Fade from '@material-ui/core/Fade'
 import Grow from '@material-ui/core/Grow'
+import Box from '@material-ui/core/Box'
+import Button from '@material-ui/core/Button'
+
+import { flexbox } from '@material-ui/system';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -18,23 +23,20 @@ const useStyles = makeStyles((theme) => ({
     toolbarTitle: {
         padding: theme.spacing(2), 
         color: theme.palette.common.white,
-
+        marginRight: 'auto',
     },
-    toolbarLink: {
-        padding: theme.spacing(1),
-        flexShrink: 0,
+    toolbarButton: {
+        padding: theme.spacing(2),
         color: theme.palette.common.white,
     },
     mainMessage: {
         color: theme.palette.common.white,
-        // padding: theme.spacing(40), 
         paddingTop: theme.spacing(40),
         paddingBottom: theme.spacing(60),
 
     },
     paperImage: {
         background: `url(${backgroundImage})`,
-        // backgroundColor: 'linear-gradient(45deg, #000035 20%, #AA0303 90%)',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -57,27 +59,24 @@ export default function Header(props) {
                 >
                     <Toolbar component="nav" variant="dense" className={classes.toolbar}>
                         <Typography
-                            component="h2"
                             variant="h5"
-                            align="left"
                             noWrap
                             className={classes.toolbarTitle}>
                                 {title}
                         </Typography>
                         {sections.map((section) => (
-                            <Link
-                            color="inherit"
-                            noWrap
-                            key={section.title}
-                            variant="body2"
+                            <Button
                             href={section.url}
-                            className={classes.toolbarLink}
+                            className={classes.toolbarButton}
+                            size="large"
                             >
-                                {section.title}
-                            </Link>
+                                
+                                    {section.title}
+                                
+                            </Button>
                         ))}
                     </Toolbar>
-                    <Grow in timeout={4000}>
+                    <Grow in timeout={6500}>
                         <Typography
                                 variant="h2"
                                 align="center"

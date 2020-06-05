@@ -16,10 +16,7 @@ const useStyles = makeStyles((theme) => ({
       paddingBottom: theme.spacing(20),
       marginLeft: theme.spacing(1),
       marginRight: theme.spacing(1),
-
       width: '250px',
-      // display: 'block', 
-      // margin: 'auto',
     },
     paper: {
       padding: theme.spacing(2),
@@ -42,7 +39,7 @@ export default function Body(props) {
 
   return (
     <React.Fragment>
-      <Grid container className={classes.gridBody} style={{ background: 'linear-gradient(45deg, #000005 50%, #000035 90%)'}}  justify="center">
+      <Grid container className={classes.gridBody} style={{ background: 'linear-gradient(0deg, #000005 20%, #647695 90%)'}}  justify="center">
         <Grid item xs={'auto'}>
           <Paper className={classes.profilePicture}/>>
         </Grid>
