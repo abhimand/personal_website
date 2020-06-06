@@ -1,18 +1,31 @@
+// React
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import './App.css';
-import eerc from './images/eerc.jpg'
-import deloitte from './images/deloitte.jpg'
-import tamiu from './images/tamiu.jpg'
-import uhs from './images/uhs.jpg'
-import fujitsu from './images/fujitsu.jpg'
+// JS & CSS Files
 import Header from './Header';
 import Body from './Body';
-import Posts from './Posts';
+import Career from './Career';
 import Footer from './Footer';
 import About from './About';
+import './App.css';
+// Material-UI
 import Box from '@material-ui/core/Box';
 import CssBaseline from '@material-ui/core/CssBaseline';
+// Header Images
+import nyc from './images/backgroundImages/nyc.jpg'
+import eveningRest from './images/backgroundImages/eveningRest.jpg'
+import lakegeneva from './images/backgroundImages/lakegeneva.jpg'
+import galacticcenter from './images/backgroundImages/galacticcenter.jpg'
+import reflectionlake from './images/backgroundImages/reflectionlake.jpg'
+
+
+// Career Images
+import eerc from './images/careerImages/eerc.jpg'
+import deloitte from './images/careerImages/deloitte.jpg'
+import tamiu from './images/careerImages/tamiu.jpg'
+import uhs from './images/careerImages/uhs.jpg'
+import fujitsu from './images/careerImages/fujitsu.jpg'
+
 
 const headerSections = [
     { title: 'Home', url: process.env.PUBLIC_URL + '/' },
@@ -79,7 +92,6 @@ function App() {
   return (
   <React.Fragment>
     <CssBaseline/>
-    <Header title="abbyshacky" sections={headerSections} />
     <BrowserRouter>
       <Switch>
         {/* Home Page */}
@@ -88,28 +100,41 @@ function App() {
           path={process.env.PUBLIC_URL + "/"}
           render={() => 
             <div>
+              <Header title="abbyshacky" mainMessage="Home"  image={reflectionlake} sections={headerSections} />
               <Body content={aboutMeDescription} title={aboutMeTitle} />
             </div>
-            }
-          />
+          }
+        />
+        <Route
+          exact
+          path={process.env.PUBLIC_URL + "/about"}
+          component={About}
+        />
         {/* Career */}
         <Route
           exact
           path={process.env.PUBLIC_URL + "/career"}
           render={() => 
             <div>
-              <Box component="div" style={{ background: 'linear-gradient(45deg, #999999 20%, #ffffff 90%)'}}>
+              <Header title="abbyshacky" mainMessage="Career" image={nyc} sections={headerSections} />
+              <Box component="div" style={{ background: 'linear-gradient(0deg, #000005 20%, #647695 90%)'}}>
                 {posts.map((post) => (
-                  <Posts key={post.title} post={post} />
+                  <Career key={post.title} post={post} />
                 ))}
               </Box>
             </div>
             }
           />
-        <Route
+        {/* Home Page */}
+        <Route 
           exact
-          path={process.env.PUBLIC_URL + "/about"}
-          component={About}
+          path={process.env.PUBLIC_URL + "/"}
+          render={() => 
+            <div>
+              <Header title="abbyshacky" mainMessage="Home"  image={nyc} sections={headerSections} />
+              <Body content={aboutMeDescription} title={aboutMeTitle} />
+            </div>
+            }
           />
       </Switch>
     </BrowserRouter>

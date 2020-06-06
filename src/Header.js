@@ -1,33 +1,26 @@
 import React from 'react';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
-import backgroundImage from './images/nyc.jpg'
 import Typography from '@material-ui/core/Typography'
 import Toolbar from '@material-ui/core/Toolbar'
-import Link from '@material-ui/core/Link'
 import Paper from '@material-ui/core/Paper'
 import Fade from '@material-ui/core/Fade'
 import Grow from '@material-ui/core/Grow'
-import Box from '@material-ui/core/Box'
 import Button from '@material-ui/core/Button'
-
-import { flexbox } from '@material-ui/system';
-
-
+import blueGrey from '@material-ui/core/colors/blueGrey'
 
 const useStyles = makeStyles((theme) => ({
     toolbar: {
         paddingBottom: theme.spacing(2),
-        borderColor: theme.palette.common.white,
     },
     toolbarTitle: {
         padding: theme.spacing(2), 
-        color: theme.palette.common.white,
+        color: blueGrey[700],
         marginRight: 'auto',
     },
     toolbarButton: {
         padding: theme.spacing(2),
-        color: theme.palette.common.white,
+        color: blueGrey[700],
     },
     mainMessage: {
         color: theme.palette.common.white,
@@ -36,17 +29,13 @@ const useStyles = makeStyles((theme) => ({
 
     },
     paperImage: {
-        background: `url(${backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
         border: theme.spacing(0),
     },
   }));
 
 
 export default function Header(props) {
-    const {sections, title} = props;
+    const {sections, title, mainMessage, image} = props;
     const classes = useStyles();
     return (
         <React.Fragment className={classes.frag}>
@@ -55,7 +44,9 @@ export default function Header(props) {
                 variant="outlined"
                 className={classes.paperImage} 
                 square="true"
-                style={{ position: "relative"}}
+                style={{    background: `url(${image})`, backgroundSize: 'cover',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center'}}
                 >
                     <Toolbar component="nav" variant="dense" className={classes.toolbar}>
                         <Typography
@@ -70,9 +61,7 @@ export default function Header(props) {
                             className={classes.toolbarButton}
                             size="large"
                             >
-                                
-                                    {section.title}
-                                
+                                {section.title}
                             </Button>
                         ))}
                     </Toolbar>
@@ -83,7 +72,7 @@ export default function Header(props) {
                                 color="inherit"
                                 className={classes.mainMessage}
                                 >
-                                    --Under Construction--                
+                                   {mainMessage}              
                         </Typography>
                     </Grow>
                 </Paper>
