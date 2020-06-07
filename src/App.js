@@ -3,16 +3,19 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // JS & CSS Files
 import Header from './Header';
-import Body from './Body';
+import Homepage from './Homepage';
 import Career from './Career';
 import Footer from './Footer';
-import About from './About';
 import './App.css';
 // Material-UI
+import { borders } from '@material-ui/system';
 import Box from '@material-ui/core/Box';
 import CssBaseline from '@material-ui/core/CssBaseline';
 // Header Images
 import nyc from './images/backgroundImages/nyc.jpg'
+import skyline from './images/backgroundImages/skyline.jpg'
+import cheftable from './images/backgroundImages/cheftable.jpg'
+import flight from './images/backgroundImages/flight.jpg'
 import eveningRest from './images/backgroundImages/eveningRest.jpg'
 import lakegeneva from './images/backgroundImages/lakegeneva.jpg'
 import galacticcenter from './images/backgroundImages/galacticcenter.jpg'
@@ -29,7 +32,6 @@ import fujitsu from './images/careerImages/fujitsu.jpg'
 
 const headerSections = [
     { title: 'Home', url: process.env.PUBLIC_URL + '/' },
-    { title: 'About', url: process.env.PUBLIC_URL + '/about' },
     { title: 'Career', url: process.env.PUBLIC_URL + '/career' },
     { title: 'Food', url: process.env.PUBLIC_URL + '/food' },
     { title: 'Travel', url: process.env.PUBLIC_URL + '/travel' },
@@ -84,8 +86,8 @@ const posts = [
 
 ];
 
-const aboutMeDescription = 'Hello! My name is Abhishek. I was inspired to create this website by my good friend Henry Vuong. I created this website to showcase myself. And perhaps other things as well.';
-const aboutMeTitle = 'About Me...'
+const aboutMeDescription = 'Hello! My name is Abhishek. I was inspired by one of my closest friends Henry Vuong to set out and create a website, although the task seemed to be more tedious than I had expected. To be honest, I am not sure what kind of content I will be posting. Whatever it may be, I hope it will provide some insightful commentary, personal mistakes of mine you can learn from, and maybe inpsire passion in you to set out and do your own good in the world.';
+const aboutMeTitle = 'Jack of all Trades - Master of None'
 
 function App() {
 
@@ -100,15 +102,12 @@ function App() {
           path={process.env.PUBLIC_URL + "/"}
           render={() => 
             <div>
-              <Header title="abbyshacky" mainMessage="Home"  image={reflectionlake} sections={headerSections} />
-              <Body content={aboutMeDescription} title={aboutMeTitle} />
+              <Header title="abbyshacky" image={reflectionlake} mainMessage="Home" sections={headerSections} />
+              <Box component="div" borderTop={5}  style={{ background: 'linear-gradient(to bottom right, #5f8c9e 30%, #132a4f 70%)', borderColor:'black'}}>
+                <Homepage content={aboutMeDescription} title={aboutMeTitle} />
+              </Box>
             </div>
           }
-        />
-        <Route
-          exact
-          path={process.env.PUBLIC_URL + "/about"}
-          component={About}
         />
         {/* Career */}
         <Route
@@ -116,7 +115,7 @@ function App() {
           path={process.env.PUBLIC_URL + "/career"}
           render={() => 
             <div>
-              <Header title="abbyshacky" mainMessage="Career" image={nyc} sections={headerSections} />
+              <Header title="abbyshacky" mainMessage="Career" image={skyline} sections={headerSections} />
               <Box component="div" style={{ background: 'linear-gradient(0deg, #000005 20%, #647695 90%)'}}>
                 {posts.map((post) => (
                   <Career key={post.title} post={post} />
@@ -132,7 +131,27 @@ function App() {
           render={() => 
             <div>
               <Header title="abbyshacky" mainMessage="Home"  image={nyc} sections={headerSections} />
-              <Body content={aboutMeDescription} title={aboutMeTitle} />
+              <Homepage content={aboutMeDescription} title={aboutMeTitle} />
+            </div>
+            }
+          />
+        {/* Food */}
+        <Route 
+          exact
+          path={process.env.PUBLIC_URL + "/Food"}
+          render={() => 
+            <div>
+              <Header title="abbyshacky" mainMessage="Food"  image={cheftable} sections={headerSections} />
+            </div>
+            }
+          />
+                  {/* Food */}
+        <Route 
+          exact
+          path={process.env.PUBLIC_URL + "/Travel"}
+          render={() => 
+            <div>
+              <Header title="abbyshacky" mainMessage="Travel"  image={flight} sections={headerSections} />
             </div>
             }
           />

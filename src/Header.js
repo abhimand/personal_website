@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: theme.spacing(2),
     },
     toolbarTitle: {
-        padding: theme.spacing(2), 
+        padding: theme.spacing(1), 
         color: blueGrey[700],
         marginRight: 'auto',
     },
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     },
     mainMessage: {
         color: theme.palette.common.white,
-        paddingTop: theme.spacing(40),
+        paddingTop: theme.spacing(45),
         paddingBottom: theme.spacing(60),
 
     },
@@ -35,23 +35,23 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function Header(props) {
-    const {sections, title, mainMessage, image} = props;
+    const {sections, title, image, mainMessage} = props;
     const classes = useStyles();
     return (
         <React.Fragment className={classes.frag}>
             <Fade in timeout={2500}>
                 <Paper
                 variant="outlined"
+            
                 className={classes.paperImage} 
                 square="true"
                 style={{    background: `url(${image})`, backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat',
                             backgroundPosition: 'center'}}
                 >
-                    <Toolbar component="nav" variant="dense" className={classes.toolbar}>
+                    <Toolbar component="nav" variant="dense" disableGutters className={classes.toolbar}>
                         <Typography
                             variant="h5"
-                            noWrap
                             className={classes.toolbarTitle}>
                                 {title}
                         </Typography>

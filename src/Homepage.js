@@ -12,15 +12,18 @@ const useStyles = makeStyles((theme) => ({
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
-      paddingTop: theme.spacing(15),
-      paddingBottom: theme.spacing(20),
+      paddingTop: theme.spacing(2),
+      paddingBottom: theme.spacing(2),
       marginLeft: theme.spacing(1),
       marginRight: theme.spacing(1),
-      width: '250px',
+      width: '370px',
+      height: '500px'
+
     },
     paper: {
       padding: theme.spacing(2),
       textAlign: 'center',
+      margin: theme.spacing(0),
       color: theme.palette.text.secondary,
     },
     boxBody: {
@@ -28,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
       margin: 'auto',
     },
     gridBody: {
-      padding: theme.spacing(2), 
+      padding: theme.spacing(5), 
       position: 'relative',
     },
 }));
@@ -39,21 +42,28 @@ export default function Body(props) {
 
   return (
     <React.Fragment>
-      <Grid container className={classes.gridBody} style={{ background: 'linear-gradient(0deg, #000005 20%, #6aa7c6 90%)'}}  justify="center">
-        <Grid item xs={'auto'}>
-          <Paper className={classes.profilePicture}/>>
+      {/* Homepage title */}
+      <Grid container style={{ color: 'white'}} className={classes.gridBody} justify="center" >
+        <Typography component="h1">
+          {title}
+        </Typography>
+      </Grid>
+      {/* Homepage content */}
+      <Grid container className={classes.gridBody}  justify="space-evenly">
+        <Grid item xs={'auto'} m={0}>
+          <Paper m={0} className={classes.profilePicture}/>>
         </Grid>
-        <Grid item xs={'auto'} >
+        <Grid item xs={'8'} >
           <Box component="span" display="inline">
             <Typography style={{ color: 'white'}} component="h2" variant="h5">
-                {title}
-            </Typography>
-            <Typography style={{ color: 'white'}} variant="subtitle1" paragraph>
               {content}
             </Typography>
           </Box>
         </Grid>
       </Grid>
+      {/* Homepage what-am-i-up=to-currently*/}
+      {/* Homepage latest posts*/}
+
     </React.Fragment>
   );
 }

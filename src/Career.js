@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     },
     gridPosts: {
         padding: theme.spacing(2),
+        position: 'relative',
         // borderBottom: `1px solid ${theme.palette.divider}`, //sets the line below the toolbar
     },
 }));
@@ -30,9 +31,9 @@ export default function Posts(props) {
             setActive(isVisible); 
         }}
         >
-            <Grid container className={classes.gridPosts} justify="center" alignContent="center">
+            <Grid container className={classes.gridPosts} justify="center" alignItems="center">
                 <Grid item xs={'auto'} md={3}>
-                    <Grow in={active} timeout={3000}>
+                    <Grow in={active} timeout={3000} style={{ transformOrigin: '0 0 0' }}>
                         <Paper className={classes.paper} style={{ height: 175, width: 250, position: "relative" }} component='img' src={post.image}/> 
                     </Grow>
                 </Grid>
