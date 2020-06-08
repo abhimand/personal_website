@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
-import Grow from '@material-ui/core/Grow';
+import Fade from '@material-ui/core/Fade';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -33,9 +33,9 @@ export default function Posts(props) {
         >
             <Grid container className={classes.gridPosts} justify="center" alignItems="center">
                 <Grid item xs={'auto'} md={3}>
-                    <Grow in={active} timeout={3000} style={{ transformOrigin: '0 0 0' }}>
+                    <Fade in={active} timeout={3000}>
                         <Paper className={classes.paper} style={{ height: 175, width: 250, position: "relative" }} component='img' src={post.image}/> 
-                    </Grow>
+                    </Fade>
                 </Grid>
                 <Grid item xs={'auto'} md={3} justify="center" style={{color: 'white'}}>
                     <Box component="span" display="inline">

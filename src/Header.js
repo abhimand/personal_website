@@ -42,7 +42,6 @@ export default function Header(props) {
             <Fade in timeout={2500}>
                 <Paper
                 variant="outlined"
-            
                 className={classes.paperImage} 
                 square="true"
                 style={{    background: `url(${image})`, backgroundSize: 'cover',
