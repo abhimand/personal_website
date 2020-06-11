@@ -9,17 +9,12 @@ import Footer from './Footer';
 import CareerPosts from './CareerPosts'
 import './App.css';
 // Material-UI
-import { borders } from '@material-ui/system';
 import Box from '@material-ui/core/Box';
 import CssBaseline from '@material-ui/core/CssBaseline';
 // Header Images
-import nyc from './images/backgroundImages/nyc.jpg'
 import skyline from './images/backgroundImages/skyline.jpg'
 import cheftable from './images/backgroundImages/cheftable.jpg'
 import flight from './images/backgroundImages/flight.jpg'
-import eveningRest from './images/backgroundImages/eveningRest.jpg'
-import lakegeneva from './images/backgroundImages/lakegeneva.jpg'
-import galacticcenter from './images/backgroundImages/galacticcenter.jpg'
 import reflectionlake from './images/backgroundImages/reflectionlake.jpg'
 
 const headerSections = [
@@ -46,7 +41,7 @@ function App() {
           render={() => 
             <div>
               <Header title="abbyshacky" image={reflectionlake} mainMessage="Under Construction" sections={headerSections} />
-              <Box component="div" borderTop={5}  style={{ background: 'linear-gradient(to bottom right, #5f8c9e 30%, #132a4f 70%)', borderColor:'black'}}>
+              <Box component="div" borderTop={5}  style={{ background: 'linear-gradient(to top, #5f8c9e 30%, #132a4f 70%)', borderColor:'black'}}>
                 <Homepage content={aboutMeDescription} title={aboutMeTitle} />
               </Box>
             </div>

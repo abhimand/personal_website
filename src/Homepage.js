@@ -1,17 +1,10 @@
 import React from 'react';
 import profPic from './images/profPic.JPG'
 import Paper from '@material-ui/core/Paper'
-import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
-import Button from '@material-ui/core/Button'
 
-
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
-import CardMedia from '@material-ui/core/CardMedia'
-import CardActions from '@material-ui/core/CardActions'
 
 
 import { makeStyles } from '@material-ui/core/styles'
@@ -22,44 +15,13 @@ const useStyles = makeStyles((theme) => ({
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
-      paddingTop: theme.spacing(1),
-      paddingBottom: theme.spacing(1),
-      marginLeft: theme.spacing(1),
-      marginRight: theme.spacing(1),
       width: '337px',
-      height: '450px'
-
+      height: '450px',
     },
-    paper: {
-      padding: theme.spacing(2),
-      textAlign: 'center',
-      margin: theme.spacing(0),
-      color: theme.palette.text.secondary,
-    },
-    boxBody: {
-      display: 'block', 
-      marginTop: theme.spacing(8),
-    },
-    gridBody: {
-      padding: theme.spacing(10), 
-      paddingBottom: theme.spacing(15), 
-      position: 'relative',
-    },
-    cardGrid: {
-      paddingTop: theme.spacing(8),
-      paddingBottom: theme.spacing(8),
-    },
-    card: {
-      height: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-    },
-    cardMedia: {
-      paddingTop: '56.25%', // 16:9
-    },
-    cardContent: {
-      flexGrow: 1,
-    },
+    marginSet: {
+      marginTop: theme.spacing(4),
+    }
+    
 }));
 
 const latestStatuses = [
@@ -77,12 +39,22 @@ export default function Body(props) {
 
   return (
     <React.Fragment>
-      {/* Homepage title */}
-      <Typography className={classes.boxBody} variant="h4" align="center" style={{ color: "white"}}>
-        {title}
-      </Typography>
-      {/* Homepage content */}
-      <Grid container className={classes.gridBody}  justify="space-evenly" alignItems="center">
+      <Container>
+        {/* Homepage title */}
+        <Typography className={classes.marginSet} variant="h4" align="center" style={{ color: "white"}}>
+          {title}
+        </Typography>
+        {/* Homepage content */}
+        <Box className={classes.marginSet} component="span" display="flex"  alignItems="center" justifyContent="center">
+          <Paper className={classes.profilePicture}/>
+        </Box>
+        <Box className={classes.marginSet} component="span" display="flex">
+          <Typography style={{ color: 'white'}} component="h2" variant="h5">
+            {content}
+          </Typography>
+        </Box>
+      </Container>
+      {/* <Grid container className={classes.gridBody}  justify="space-evenly" alignItems="center">
         <Grid item xs={'auto'} m={0}>
           <Paper m={0} className={classes.profilePicture}/>
         </Grid>
@@ -93,7 +65,7 @@ export default function Body(props) {
             </Typography>
           </Box>
         </Grid>
-      </Grid>
+      </Grid> */}
       {/* Homepage what-am-i-up=to-currently*/}
       {/* {latestStatuses.map((status) => (
         <Grid container className={classes.gridBody}  justify="space-evenly" alignItems="center">

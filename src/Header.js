@@ -1,4 +1,5 @@
 import React from 'react';
+import SideDrawer from './SideDrawer';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography'
@@ -54,15 +55,7 @@ export default function Header(props) {
                             className={classes.toolbarTitle}>
                                 {title}
                         </Typography>
-                        {sections.map((section) => (
-                            <Button
-                            href={section.url}
-                            className={classes.toolbarButton}
-                            size="large"
-                            >
-                                {section.title}
-                            </Button>
-                        ))}
+                        <SideDrawer sections={sections}/>
                     </Toolbar>
                     <Grow in timeout={6500}>
                         <Typography
