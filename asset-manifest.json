@@ -1,25 +1,21 @@
 {
   "files": {
     "main.css": "/static/css/main.f78f7e94.chunk.css",
-    "main.js": "/static/js/main.be0c01e6.chunk.js",
-    "main.js.map": "/static/js/main.be0c01e6.chunk.js.map",
+    "main.js": "/static/js/main.9699bdd3.chunk.js",
+    "main.js.map": "/static/js/main.9699bdd3.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7c0ae09a.js",
     "runtime-main.js.map": "/static/js/runtime-main.7c0ae09a.js.map",
-    "static/js/2.d78c8179.chunk.js": "/static/js/2.d78c8179.chunk.js",
-    "static/js/2.d78c8179.chunk.js.map": "/static/js/2.d78c8179.chunk.js.map",
+    "static/js/2.58bec92f.chunk.js": "/static/js/2.58bec92f.chunk.js",
+    "static/js/2.58bec92f.chunk.js.map": "/static/js/2.58bec92f.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.1bc3eeb600a94226273ca4cc551e8730.js": "/precache-manifest.1bc3eeb600a94226273ca4cc551e8730.js",
+    "precache-manifest.f543c7b749ba77c58105320591aec1ba.js": "/precache-manifest.f543c7b749ba77c58105320591aec1ba.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.f78f7e94.chunk.css.map": "/static/css/main.f78f7e94.chunk.css.map",
-    "static/js/2.d78c8179.chunk.js.LICENSE.txt": "/static/js/2.d78c8179.chunk.js.LICENSE.txt",
+    "static/js/2.58bec92f.chunk.js.LICENSE.txt": "/static/js/2.58bec92f.chunk.js.LICENSE.txt",
     "static/media/cheftable.jpg": "/static/media/cheftable.dda098ea.jpg",
     "static/media/deloitte.jpg": "/static/media/deloitte.9107a157.jpg",
-    "static/media/eveningRest.jpg": "/static/media/eveningRest.cf76048b.jpg",
     "static/media/flight.jpg": "/static/media/flight.fb50e7d2.jpg",
     "static/media/fujitsu.jpg": "/static/media/fujitsu.4d934907.jpg",
-    "static/media/galacticcenter.jpg": "/static/media/galacticcenter.1bc91b40.jpg",
-    "static/media/lakegeneva.jpg": "/static/media/lakegeneva.5926c637.jpg",
-    "static/media/nyc.jpg": "/static/media/nyc.43bc6395.jpg",
     "static/media/profPic.JPG": "/static/media/profPic.7878bec5.JPG",
     "static/media/reflectionlake.jpg": "/static/media/reflectionlake.77e6ec30.jpg",
     "static/media/skyline.jpg": "/static/media/skyline.171c6aee.jpg",
@@ -28,8 +24,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.7c0ae09a.js",
-    "static/js/2.d78c8179.chunk.js",
+    "static/js/2.58bec92f.chunk.js",
     "static/css/main.f78f7e94.chunk.css",
-    "static/js/main.be0c01e6.chunk.js"
+    "static/js/main.9699bdd3.chunk.js"
   ]
 }
