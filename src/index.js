@@ -3,6 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+//Analytics
+import ReactGA from 'react-ga';
+ReactGA.pageview(window.location.pathname + window.location.search);
+ReactGA.event({
+  category: 'User',
+  action: 'Sent message'
+});
 
 ReactDOM.render(
   <React.StrictMode>

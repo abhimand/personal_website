@@ -7,7 +7,6 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Paper from '@material-ui/core/Paper'
 import Fade from '@material-ui/core/Fade'
 import Grow from '@material-ui/core/Grow'
-import Button from '@material-ui/core/Button'
 import blueGrey from '@material-ui/core/colors/blueGrey'
 
 const useStyles = makeStyles((theme) => ({
@@ -45,7 +44,8 @@ export default function Header(props) {
                 variant="outlined"
                 className={classes.paperImage} 
                 square="true"
-                style={{    background: `url(${image})`, backgroundSize: 'cover',
+                style={{    background: `url(${image})`, 
+                            backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat',
                             backgroundPosition: 'center'}}
                 >

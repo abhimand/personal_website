@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'white',
     },
     paper: {
-        background: "linear-gradient(to top, #1F1E1F 10%, #3F3F3F 70%)",
+        background: "linear-gradient(0deg, rgba(0,11,28,1) 0%, rgba(19,49,87,1) 100%)",
     },
     buttonSpacing: {
         paddingTop: theme.spacing(2), 
@@ -60,7 +60,9 @@ export default function SideDrawer(props) {
         {sections.map((section) => (
           <ListItem button key={section.title} component="button" href={section.url} className={classes.buttonSpacing}>
             <ListItemIcon>
-              {section.title === "Home" ? <HomeIcon /> : section.title === "Career" ? <PersonIcon/> : section.title === "Food" ? <EmojiFoodBeverageIcon/> : <FlightIcon/>}
+              {section.title === "Home" ? <HomeIcon style={{ fontSize: 35}}/> : section.title === "Career" 
+                                        ? <PersonIcon style={{ fontSize: 35}}/> : section.title === "Food" 
+                                        ? <EmojiFoodBeverageIcon style={{ fontSize: 35}}/> : <FlightIcon style={{ fontSize: 35}}/>}
             </ListItemIcon>
             <ListItemText primary={section.title} />
           </ListItem>
@@ -73,7 +75,7 @@ export default function SideDrawer(props) {
         {["right"].map(anchor => (
             <React.Fragment key={anchor}>
                 <IconButton onClick={toggleDrawer(anchor, true)} > 
-                    <DehazeIcon/> 
+                    <DehazeIcon style={{ fontSize: 35}}/> 
                 </IconButton>
                 <SwipeableDrawer
                     classes={{ paper: classes.paper }}

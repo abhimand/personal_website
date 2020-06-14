@@ -4,8 +4,7 @@ import Paper from '@material-ui/core/Paper'
 import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
-
-
+import pattern2 from './images/patterns/pattern2.jpg'
 
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -20,8 +19,11 @@ const useStyles = makeStyles((theme) => ({
     },
     marginSet: {
       marginTop: theme.spacing(4),
+    },
+    marginLast: {
+      padding: theme.spacing(4), 
     }
-    
+
 }));
 
 const latestStatuses = [
@@ -39,17 +41,17 @@ export default function Body(props) {
 
   return (
     <React.Fragment>
-      <Container>
+      <Container styles={{background: `url(${pattern2})`}}>
         {/* Homepage title */}
-        <Typography className={classes.marginSet} variant="h4" align="center" style={{ color: "white"}}>
+        <Typography className={classes.marginSet} variant="h4" align="center" style={{ color: '#606060'}}>
           {title}
         </Typography>
         {/* Homepage content */}
         <Box className={classes.marginSet} component="span" display="flex"  alignItems="center" justifyContent="center">
           <Paper className={classes.profilePicture}/>
         </Box>
-        <Box className={classes.marginSet} component="span" display="flex">
-          <Typography style={{ color: 'white'}} component="h2" variant="h5">
+        <Box className={classes.marginLast} component="span" display="flex">
+          <Typography component="h2" variant="h5" style={{ color: '#808080'}}>
             {content}
           </Typography>
         </Box>
