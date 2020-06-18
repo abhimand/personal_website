@@ -1,6 +1,9 @@
 # Personal Website
 
-In-Progress
+~In-Progress~
+
+*06/17/2020* My laptop motherboard just got fried and I am currently out of town, so project will have to on hold for now.
+
 
 * React
 * Material-UI
