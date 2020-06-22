@@ -4,21 +4,24 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // JS & CSS Files
 import Header from './Header';
 import Homepage from './Homepage';
-import Career from './Career';
 import Footer from './Footer';
-import CareerPosts from './CareerPosts'
+import Resume from './Resume';
+import Submission from './Submission'
 import './App.css';
 // Material-UI
 import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
+
 // Header Images
 import skyline from './images/backgroundImages/skyline.jpg'
 import cheftable from './images/backgroundImages/cheftable.jpg'
 import flight from './images/backgroundImages/flight.jpg'
 import reflectionlake from './images/backgroundImages/reflectionlake.jpg'
 import homepageImage from './images/patterns/pattern.png'
+import { Grid } from '@material-ui/core';
 
 const theme = createMuiTheme({
   typography: {
@@ -32,9 +35,10 @@ const theme = createMuiTheme({
   }
 });
 
+
 const headerSections = [
     { title: 'Home', url: process.env.PUBLIC_URL + '/' },
-    { title: 'Career', url: process.env.PUBLIC_URL + '/career' },
+    { title: 'Resume', url: process.env.PUBLIC_URL + '/resume' },
     { title: 'Food', url: process.env.PUBLIC_URL + '/food' },
     { title: 'Travel', url: process.env.PUBLIC_URL + '/travel' },
 ];
@@ -44,42 +48,51 @@ const aboutMeTitle = 'Jack of all Trades - Master of None'
 const footerMessage = 'Made with React, Material-UI, and constant frustration'
 
 function App() {
-
   return (
   <React.Fragment>
+    {/* Setting layouts */}
     <CssBaseline/>
     <ThemeProvider theme={theme}>
-
+    {/* Routes */}
     <BrowserRouter>
       <Switch>
-        {/* Home Page */}
+        {/* Home Page - FINISHED */}
         <Route 
           exact
           path={process.env.PUBLIC_URL + "/"}
           render={() => 
             <div>
-              <Header title="abbyshacky" image={reflectionlake} mainMessage="Under Construction" sections={headerSections} />
-              <Box style={{ background: `url(${homepageImage})`, 
+              <Header title="abbyshacky" 
+                      image={reflectionlake} 
+                      mainMessage="Under Construction" 
+                      sections={headerSections} 
+              />
+              <Box  component="div" 
+                    borderTop={5}
+                    style={{ background: 'lightgrey', 
                             backgroundPosition: 'center', 
                             borderColor:'black', 
-                             }} component="div" borderTop={5} >  
-                <Homepage content={aboutMeDescription} title={aboutMeTitle} />
+                            }}  
+              >  
+                <Homepage content={aboutMeDescription} 
+                          title={aboutMeTitle} 
+                />
               </Box>
             </div>
           }
         />
-        {/* Career */}
+        {/* Resume */}
         <Route
           exact
-          path={process.env.PUBLIC_URL + "/career"}
+          path={process.env.PUBLIC_URL + "/resume"}
           render={() => 
             <div>
-              <Header title="abbyshacky" mainMessage="Career" image={skyline} sections={headerSections} />
-              <Box component="div" style={{ background: 'linear-gradient(0deg, #000005 20%, #647695 90%)'}}>
-                {CareerPosts.map((post) => (
-                  <Career key={post.title} post={post} />
-                ))}
-              </Box>
+              <Header title="abbyshacky"  
+                      image={skyline} 
+                      mainMessage="Resume" 
+                      sections={headerSections} 
+              />
+              <Resume />
             </div>
             }
           />
@@ -93,7 +106,7 @@ function App() {
             </div>
             }
           />
-          {/* Food */}
+        {/* Travel */}
         <Route 
           exact
           path={process.env.PUBLIC_URL + "/Travel"}
@@ -103,10 +116,20 @@ function App() {
             </div>
             }
           />
+          {/* Submission */}
+          {/* <Route 
+          exact
+          path={process.env.PUBLIC_URL + "/submission"}
+          render={() => 
+            <div>
+              <Submission title="abbyshacky" sections={headerSections} />
+            </div>
+            }
+          /> */}
       </Switch>
     </BrowserRouter>
     <Box style={{ background: 'rgb(25,39,60)'}}>
-      <Footer message={footerMessage} />
+      <Footer message={footerMessage} title="Submitted!" />
     </Box>
     </ThemeProvider>
   </React.Fragment>

@@ -7,10 +7,39 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Fade from '@material-ui/core/Fade';
+import { blueGrey } from '@material-ui/core/colors';
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import { Divider } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
-        color: theme.palette.text.secondary,
+        color: theme.palette.text.secondary,    
+    },
+    spacingHeader: {
+        paddingBottom: theme.spacing(0), 
+        color: 'white'
+    },
+    removeMargin: {
+        margin: theme.spacing(0),
+    },
+    root: {
+        display: 'flex',
+        backgroundColor: 'rgb(180,180,160)',
+        color: 'white',
+    },
+    details: {
+        display: 'flex',
+        flexDirection: 'column',
+    },
+    content: {
+        flex: '1 0 auto',
+    },
+    zeroTypoMargin: {
+        margin: theme.spacing(0),
     },
     gridPosts: {
         padding: theme.spacing(2),
@@ -25,39 +54,41 @@ export default function Posts(props) {
   let [active, setActive] = useState(false);
   return (
     <React.Fragment>
-        <VizSensor 
+        {/* <VizSensor 
         partialVisibility
         onChange={(isVisible) => {
             setActive(isVisible); 
         }}
-        >
-            <Grid container className={classes.gridPosts} justify="center" alignItems="center">
-                <Grid item xs={'auto'} md={3}>
-                    <Fade in={active} timeout={3000}>
-                        <Paper className={classes.paper} style={{ height: 175, width: 250, position: "relative" }} component='img' src={post.image}/> 
-                    </Fade>
-                </Grid>
-                <Grid item xs={'auto'} md={3} justify="center" style={{color: 'white'}}>
-                    <Box component="span" display="inline">
-                        <Typography component="h2" variant="h5">
-                            {post.title}
-                        </Typography>
-                        <Typography variant="subtitle1" paragraph>
-                            {post.position}
-                        </Typography>
-                        <Typography variant="subtitle1" paragraph>
-                            {post.date}
-                        </Typography>
-                        <Typography variant="subtitle1" paragraph>
-                            {post.location}
-                        </Typography>
-                        <Typography variant="subtitle1" paragraph>
-                            {post.description}
-                        </Typography>
-                    </Box>
-                </Grid>
-            </Grid>
-        </VizSensor>
+        > */}
+        <Grid className={classes.gridPosts} item xs={12} md={8}>
+            <Card className={classes.root}>
+                {/* <div display="inline">
+                    <Paper 
+                        className={classes.paper} 
+                        style={{ height: 'auto', width: 225 }} 
+                        component='img' 
+                        src={post.image}
+                    />
+                </div> */}
+                <div display="block" className={classes.details}>
+                    <CardHeader className={classes.spacingHeader}
+                                title={post.title} 
+                                subheader={post.position + " - " + post.location}
+                    />
+                    <Divider/>
+                    <CardContent className={classes.content}>
+                        <Box component="div" display="inline">
+                            <Typography className={classes.removeMargin} variant="subtitle2" paragraph>
+                                {post.date}
+                            </Typography>
+                            <Typography variant="subtitle1" paragraph>
+                                {post.description}
+                            </Typography>
+                        </Box>
+                    </CardContent>
+                </div>
+            </Card>
+        </Grid>
     </React.Fragment> 
   );
 }

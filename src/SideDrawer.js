@@ -1,16 +1,17 @@
 import React from "react";
-import clsx from "clsx";
+// import clsx from "clsx";
+// Cores
 import { makeStyles } from "@material-ui/core/styles";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import List from "@material-ui/core/List";
-import DehazeIcon from '@material-ui/icons/Dehaze';
 import IconButton from '@material-ui/core/IconButton';
-
-import Divider from "@material-ui/core/Divider";
+// import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-
+import { blueGrey } from '@material-ui/core/colors';
+// Icons
+import DehazeIcon from '@material-ui/icons/Dehaze';
 import HomeIcon from '@material-ui/icons/Home';
 import FlightIcon from '@material-ui/icons/Flight';
 import EmojiFoodBeverageIcon from '@material-ui/icons/EmojiFoodBeverage';
@@ -60,9 +61,9 @@ export default function SideDrawer(props) {
         {sections.map((section) => (
           <ListItem button key={section.title} component="button" href={section.url} className={classes.buttonSpacing}>
             <ListItemIcon>
-              {section.title === "Home" ? <HomeIcon style={{ fontSize: 35}}/> : section.title === "Career" 
-                                        ? <PersonIcon style={{ fontSize: 35}}/> : section.title === "Food" 
-                                        ? <EmojiFoodBeverageIcon style={{ fontSize: 35}}/> : <FlightIcon style={{ fontSize: 35}}/>}
+              {section.title === "Home" ? <HomeIcon style={{ fontSize: 35, color: blueGrey[50]}}/> : section.title === "Resume" 
+                                        ? <PersonIcon style={{ fontSize: 35, color: blueGrey[50]}}/> : section.title === "Food" 
+                                        ? <EmojiFoodBeverageIcon style={{ fontSize: 35, color: blueGrey[50]}}/> : <FlightIcon style={{ fontSize: 35, color: blueGrey[50]}}/>}
             </ListItemIcon>
             <ListItemText primary={section.title} />
           </ListItem>

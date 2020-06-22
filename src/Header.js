@@ -59,7 +59,7 @@ export default function Header(props) {
                     </Toolbar>
                     <Grow in timeout={6500}>
                         <Typography
-                                variant="h2"
+                                variant="h1"
                                 align="center"
                                 color="inherit"
                                 className={classes.mainMessage}

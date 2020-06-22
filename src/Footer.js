@@ -6,21 +6,22 @@ import Typography from '@material-ui/core/Grid'
 import VizSensor from 'react-visibility-sensor'
 import Fade from '@material-ui/core/Fade';
 import { blueGrey } from '@material-ui/core/colors';
-
 // Icons
 import FacebookIcon from '@material-ui/icons/Facebook';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-
+// import Input from '@material-ui/core/Input';
+// import FormControl from '@material-ui/core/FormControl';
 
 const useStyles = makeStyles((theme) => ({
     typo: {
       margin: theme.spacing(0),
-      paddingTop: theme.spacing(4)
+      paddingTop: theme.spacing(8)
     },
     boxStyles: {
       color: 'white',
-      padding: theme.spacing(1)
+      paddingRight: theme.spacing(4),
+      paddingBottom: theme.spacing(4),
     },
 }));
 
@@ -31,42 +32,44 @@ export default function Footer(props) {
 
   return (
     <React.Fragment>
-        <VizSensor 
-          partialVisibility
-          onChange={(isVisible) => {
-              setActive(isVisible); 
-          }}
-          >
-          <Box display="flex" justifyContent="center" >
-            <Fade in={active} timeout={3000}>
-              <Typography className={classes.typo} style={{ color: 'white'}} component="h2" variant="h5">
-                  {message}
-              </Typography>
-            </Fade>
-          </Box>
-        </VizSensor>
-        <Box className={classes.boxStyles} component="span" display="flex" flexDirection="row-reverse" >
-          <IconButton href="https://www.facebook.com/abhishek.mandal.75/" >
-            <FacebookIcon style={{ fontSize: 50, color: blueGrey[50] }} />
-          </IconButton>
-          <IconButton href="https://github.com/abhimand/" >
-            <GitHubIcon style={{ fontSize: 50, color: blueGrey[50] }} />
-          </IconButton>
-          <IconButton href="https://www.linkedin.com/in/aemandal/" >
-            <LinkedInIcon style={{ fontSize: 50, color: blueGrey[50] }} />
-          </IconButton>
+      <VizSensor 
+        partialVisibility
+        onChange={(isVisible) => {
+            setActive(isVisible); 
+        }}
+        >
+        <Box display="flex" justifyContent="center" >
+          <Fade in={active} timeout={3000}>
+            <Typography className={classes.typo} style={{ color: 'white'}} component="h2" variant="h5">
+                {message}
+            </Typography>
+          </Fade>
         </Box>
-        {/* <div className="mailing-list-signup-container">
-				<div id="mc_embed_signup">
-				<form action="//dataskeptic.us9.list-manage.com/subscribe/post?u=65e63d6f84f1d87759105d133&amp;id=dc60d554db" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
-				    <div id="mc_embed_signup_scroll">
-						<label for="mce-EMAIL">Subscribe to our mailing list</label>
-						<input type="input" value={this.state.email} onChange={this.onChange} name="EMAIL" className="email" id="mce-EMAIL" placeholder="email address" required />
-					    <div className="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="button" /></div>
-				    </div>
-				</form>
-				</div>
-			</div> */}
+      </VizSensor>
+      <Box className={classes.boxStyles} component="span" display="flex" flexDirection="row-reverse" >
+        <IconButton href="https://www.facebook.com/abhishek.mandal.75/" >
+          <FacebookIcon style={{ fontSize: 50, color: blueGrey[50] }} />
+        </IconButton>
+        <IconButton href="https://github.com/abhimand/" >
+          <GitHubIcon style={{ fontSize: 50, color: blueGrey[50] }} />
+        </IconButton>
+        <IconButton href="https://www.linkedin.com/in/aemandal/" >
+          <LinkedInIcon style={{ fontSize: 50, color: blueGrey[50] }} />
+        </IconButton>
+      </Box>
+
+      {/* form control to follow */}
+      {/* <form  action="https://getsimpleform.com/messages?form_api_token=ab1cc309b57edc613600e676540b4675" method="post">
+        <FormControl> */}
+          {/* <!-- the redirect_to is optional, the form will redirect to the referrer on submission --> */}
+          {/* <Input type='hidden' name='redirect_to' value='https://www.abbyshacky.com/submission' /> */}
+          {/* <!-- all your input fields here.... --> */}
+          {/* <Input type="text" name="Name"/>
+          <Input type="text" name="Email"/>
+          <Input type="text" name="Feedback"/>
+          <Input type="submit" name="Submit!"/>
+        </FormControl>
+      </form> */}
     </React.Fragment>
   );
 }
