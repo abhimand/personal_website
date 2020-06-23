@@ -60,7 +60,7 @@ export default function Posts(props) {
             setActive(isVisible); 
         }}
         > */}
-        <Grid className={classes.gridPosts} item xs={12} md={8}>
+        <Grid className={classes.gridPosts} item xs={12} md={6}>
             <Card className={classes.root}>
                 {/* <div display="inline">
                     <Paper 
@@ -78,10 +78,15 @@ export default function Posts(props) {
                     <Divider/>
                     <CardContent className={classes.content}>
                         <Box component="div" display="inline">
-                            <Typography className={classes.removeMargin} variant="subtitle2" paragraph>
+                            <Typography className={classes.removeMargin} 
+                                        variant="subtitle2" 
+                                        paragraph
+                            >
                                 {post.date}
                             </Typography>
-                            <Typography variant="subtitle1" paragraph>
+                            <Typography variant="subtitle1" 
+                                        paragraph
+                            >
                                 {post.description}
                             </Typography>
                         </Box>

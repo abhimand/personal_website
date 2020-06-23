@@ -11,6 +11,10 @@ import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
 import Divider from '@material-ui/core/Divider';
+import Paper from '@material-ui/core/Paper';
+import { flexbox } from '@material-ui/system';
+
+
 
 /*
 Things I want to implement: 
@@ -23,8 +27,6 @@ Things I want to implement:
  - 
 */
 
-
-
 const useStyles = makeStyles((theme) => ({
     typoHeader: {
         padding: theme.spacing(2),
@@ -36,12 +38,17 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
 
     },
-    details: {
-        display: 'flex',
+    gridPosts: {
+        padding: theme.spacing(2),
+        position: 'relative',
+        // borderBottom: `1px solid ${theme.palette.divider}`, //sets the line below the toolbar
     },
-    content: {
-        flex: '1 0 auto',
-    },
+    // details: {
+    //     display: 'flex',
+    // },
+    // content: {
+    //     flex: '1 0 auto',
+    // },
 }));
 
 
@@ -50,7 +57,9 @@ export default function Resume(props) {
 
     return (
         <div>
+            {/* *************************************************************************** */}
             {/* Education Section*/}
+            {/* *************************************************************************** */}
             <Box style={{ background: 'rgb(25,39,60)'}}>
                 <Typography style={{ color: 'white'}}
                             className={classes.typoHeader}  
@@ -60,26 +69,63 @@ export default function Resume(props) {
                     Education
                 </Typography>
             </Box>
+            {/* <Grid container
+                justify="space-between"
+                style={{  background: 'lightgrey',
+                            borderColor: 'black',
+                        }} 
+            >  
 
-            <Card className={classes.root}>
-                <div display="block" className={classes.details}>
-                    <CardHeader className={classes.spacingHeader}
-                                title="Education" 
-                    />
-                    <Divider/>
-                    <CardContent className={classes.content}>
-                        <Box component="div" display="inline">
-                            <Typography className={classes.removeMargin} variant="subtitle2" paragraph>
-                            Bachelors of Science in Electrical & Computer Engineering
-                            </Typography>
-                            <Typography variant="subtitle1" paragraph>
-                                Focuses on Software Engineering and Design
-                            </Typography>
-                        </Box>
-                    </CardContent>
-                </div>
-            </Card>
+                <Typography inline variant="body1" align="left">Choose New Support:</Typography>
+                <Typography inline variant="body1" align="right">some text</Typography>
+
+            </Grid> */}
+
+
+            <Grid container 
+                direction="column"
+                justify="space-between"
+                alignItems="center"
+                style={{  background: 'lightgrey',
+                            borderColor: 'black',
+                        }} 
+            >
+ 
+                <Grid   className={classes.gridPosts} 
+                        xs={12}
+                        md={8}
+                        item 
+                >
+                    <Card className={classes.root}>
+                        <div    className={classes.details}
+                                display="block" >   
+                            <CardHeader className={classes.spacingHeader}
+                                        title="Education" 
+                            />
+                            <Divider/>
+                            <CardContent className={classes.content}>
+                                <Box component="div" display="inline" flexGrow={1}>
+                                    <Typography className={classes.removeMargin} display="inline" align="right">
+                                        Bachelors of Science in Electrical & Computer Engineering
+                                    </Typography>
+                                    <Typography display="inline" align="right">
+                                        2016 - 2020
+                                    </Typography>
+                                    <Typography variant="subtitle1" paragraph>
+                                        Focuses on Software Engineering and Design blah blah blah blah blah blah blah balh
+                                    </Typography>
+                                </Box>
+
+                                
+                            </CardContent>
+                        </div>
+                    </Card>
+                </Grid>
+            </Grid>
+            {/* *************************************************************************** */}
             {/* Career Section */}
+            {/* *************************************************************************** */}
+
             <Box style={{ background: 'rgb(25,39,60)'}}>
                 <Typography style={{ color: 'white'}}
                             className={classes.typoHeader}  
@@ -90,6 +136,7 @@ export default function Resume(props) {
                 </Typography>
             </Box>
             <Grid container 
+                wrap="nowrap"
                 direction="column"
                 justify="space-evenly"
                 alignItems="center"
@@ -98,14 +145,16 @@ export default function Resume(props) {
                             borderColor: 'black',
                         }} 
             >
-            {CareerPosts.map((post) => (
-                <Career key={post.title} 
-                        post={post} 
-                />
-            ))}
+                {CareerPosts.map((post) => (
+                    <Career key={post.title} 
+                            post={post} 
+                    />
+                ))}
             </Grid>
 
-
+            {/* *************************************************************************** */}
+            {/* Skills Section */}
+            {/* *************************************************************************** */}
             <Box style={{ background: 'rgb(25,39,60)'}}>
                 <Typography style={{ color: 'white'}}
                             className={classes.typoHeader}  
@@ -115,7 +164,9 @@ export default function Resume(props) {
                     Skills
                 </Typography>
             </Box>
-
+            {/* *************************************************************************** */}
+            {/* Projects Section */}
+            {/* *************************************************************************** */}
             <Box style={{ background: 'rgb(25,39,60)'}}>
                 <Typography style={{ color: 'white'}}
                             className={classes.typoHeader}  
@@ -126,15 +177,6 @@ export default function Resume(props) {
                 </Typography>
             </Box>
 
-            <Box style={{ background: 'rgb(25,39,60)'}}>
-                <Typography style={{ color: 'white'}}
-                            className={classes.typoHeader}  
-                            variant="h4"
-                            align="center"
-                >
-                    Education
-                </Typography>
-            </Box>
         </div>
     );
 }
