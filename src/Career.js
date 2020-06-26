@@ -1,99 +1,76 @@
-import React, { useState } from 'react';
-import VizSensor from 'react-visibility-sensor'
+// React
+import React from 'react';
 import PropTypes from 'prop-types';
+// Material-UI
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
-import Fade from '@material-ui/core/Fade';
-import { blueGrey } from '@material-ui/core/colors';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
+import Divider from '@material-ui/core/Divider';
+import Container from '@material-ui/core/Container';
+import { grey } from '@material-ui/core/colors';
 
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import { Divider } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
-    paper: {
-        color: theme.palette.text.secondary,    
-    },
-    spacingHeader: {
-        paddingBottom: theme.spacing(0), 
-        color: 'white'
-    },
-    removeMargin: {
-        margin: theme.spacing(0),
+    careerContainer: {
+        padding: theme.spacing(2), 
     },
     root: {
-        display: 'flex',
-        backgroundColor: 'rgb(180,180,160)',
+        backgroundColor: 'rgb(180,180,160)', //beige
         color: 'white',
-    },
-    details: {
-        display: 'flex',
-        flexDirection: 'column',
-    },
-    content: {
-        flex: '1 0 auto',
-    },
-    zeroTypoMargin: {
-        margin: theme.spacing(0),
-    },
-    gridPosts: {
         padding: theme.spacing(2),
-        position: 'relative',
-        // borderBottom: `1px solid ${theme.palette.divider}`, //sets the line below the toolbar
     },
+    subheader: {
+        color: grey[700],
+        paddingBottom: theme.spacing(1),
+    },
+    location: {
+        paddingTop: theme.spacing(1),
+    }
 }));
 
 export default function Posts(props) {
   const classes = useStyles();
   const { post } = props;
-  let [active, setActive] = useState(false);
   return (
     <React.Fragment>
-        {/* <VizSensor 
-        partialVisibility
-        onChange={(isVisible) => {
-            setActive(isVisible); 
-        }}
-        > */}
-        <Grid className={classes.gridPosts} item xs={12} md={6}>
-            <Card className={classes.root}>
-                {/* <div display="inline">
-                    <Paper 
-                        className={classes.paper} 
-                        style={{ height: 'auto', width: 225 }} 
-                        component='img' 
-                        src={post.image}
-                    />
-                </div> */}
-                <div display="block" className={classes.details}>
-                    <CardHeader className={classes.spacingHeader}
-                                title={post.title} 
-                                subheader={post.position + " - " + post.location}
-                    />
-                    <Divider/>
-                    <CardContent className={classes.content}>
-                        <Box component="div" display="inline">
-                            <Typography className={classes.removeMargin} 
-                                        variant="subtitle2" 
-                                        paragraph
-                            >
-                                {post.date}
-                            </Typography>
-                            <Typography variant="subtitle1" 
-                                        paragraph
-                            >
-                                {post.description}
-                            </Typography>
-                        </Box>
-                    </CardContent>
-                </div>
-            </Card>
-        </Grid>
+        <Container className={classes.careerContainer}
+                    maxWidth="md">
+            <Box className={classes.root}
+                    boxShadow={4}
+                    borderRadius={8}>
+                <Typography variant="h5">
+                    {post.title}  
+                </Typography>
+                
+                <Grid   justify="space-between"
+                        container
+                        className={classes.subheader}>
+                    <Typography display="inline" 
+                                variant="body2"
+                                align="left">
+                        {post.position}
+                    </Typography>
+
+                    <Typography display="inline"
+                                variant="caption"
+                                align="right">
+                            {post.date}  
+                    </Typography>
+                </Grid>
+
+                <Divider/>
+                
+                <Typography className={classes.location} 
+                            variant="subtitle1">
+                    {post.location}
+                </Typography>
+                <Typography variant="body1"
+                            paragraph>
+                    {post.description}  
+                </Typography>
+            </Box>
+        </Container>
     </React.Fragment> 
   );
 }

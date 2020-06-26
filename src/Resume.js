@@ -14,8 +14,6 @@ import Divider from '@material-ui/core/Divider';
 import Paper from '@material-ui/core/Paper';
 import { flexbox } from '@material-ui/system';
 
-
-
 /*
 Things I want to implement: 
  - Education: single card compiling major, focuses, and courses
@@ -33,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     },
     root: {
         display: 'flex',
-        backgroundColor: 'rgb(180,180,160)',
+        backgroundColor: 'rgb(180,180,160)',  //beige color
         color: 'white',
         flexDirection: 'column',
 
@@ -60,7 +58,7 @@ export default function Resume(props) {
             {/* *************************************************************************** */}
             {/* Education Section*/}
             {/* *************************************************************************** */}
-            <Box style={{ background: 'rgb(25,39,60)'}}>
+            <Box style={{ background: 'rgb(25,39,60)'}}> 
                 <Typography style={{ color: 'white'}}
                             className={classes.typoHeader}  
                             variant="h4"
@@ -69,24 +67,11 @@ export default function Resume(props) {
                     Education
                 </Typography>
             </Box>
-            {/* <Grid container
-                justify="space-between"
-                style={{  background: 'lightgrey',
-                            borderColor: 'black',
-                        }} 
-            >  
-
-                <Typography inline variant="body1" align="left">Choose New Support:</Typography>
-                <Typography inline variant="body1" align="right">some text</Typography>
-
-            </Grid> */}
-
-
             <Grid container 
                 direction="column"
                 justify="space-between"
                 alignItems="center"
-                style={{  background: 'lightgrey',
+                style={{  background: 'lightgrey', //light grey
                             borderColor: 'black',
                         }} 
             >
@@ -101,6 +86,7 @@ export default function Resume(props) {
                                 display="block" >   
                             <CardHeader className={classes.spacingHeader}
                                         title="Education" 
+                                        subheader="test"
                             />
                             <Divider/>
                             <CardContent className={classes.content}>
@@ -125,8 +111,9 @@ export default function Resume(props) {
             {/* *************************************************************************** */}
             {/* Career Section */}
             {/* *************************************************************************** */}
+            
 
-            <Box style={{ background: 'rgb(25,39,60)'}}>
+            <Box style={{ background: 'rgb(25,39,60)'}}> 
                 <Typography style={{ color: 'white'}}
                             className={classes.typoHeader}  
                             variant="h4"
@@ -135,22 +122,25 @@ export default function Resume(props) {
                     Career
                 </Typography>
             </Box>
-            <Grid container 
+            {/* <Grid container 
                 wrap="nowrap"
                 direction="column"
                 justify="space-evenly"
                 alignItems="center"
+                fixed
                 borderTop={5}
-                style={{  background: 'lightgrey',
+                style={{  background: 'lightgrey', //light grey
                             borderColor: 'black',
                         }} 
-            >
+            > */}
+            <Box style={{ background: 'lightgrey'}}>
                 {CareerPosts.map((post) => (
                     <Career key={post.title} 
                             post={post} 
                     />
                 ))}
-            </Grid>
+            </Box>
+            {/* </Grid> */}
 
             {/* *************************************************************************** */}
             {/* Skills Section */}
@@ -164,6 +154,7 @@ export default function Resume(props) {
                     Skills
                 </Typography>
             </Box>
+            
             {/* *************************************************************************** */}
             {/* Projects Section */}
             {/* *************************************************************************** */}
