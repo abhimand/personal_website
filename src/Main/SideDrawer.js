@@ -55,11 +55,14 @@ export default function SideDrawer(props) {
       className={classes.list}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}   
-    >
+      onKeyDown={toggleDrawer(anchor, false)}>
       <List >
         {sections.map((section) => (
-          <ListItem button key={section.title} component="button" href={section.url} className={classes.buttonSpacing}>
+          <ListItem button 
+                    key={section.title} 
+                    component="button" 
+                    href={section.url} 
+                    className={classes.buttonSpacing}>
             <ListItemIcon>
               {section.title === "Home" ? <HomeIcon style={{ fontSize: 35, color: blueGrey[50]}}/> : section.title === "Resume" 
                                         ? <PersonIcon style={{ fontSize: 35, color: blueGrey[50]}}/> : section.title === "Food" 
@@ -83,8 +86,7 @@ export default function SideDrawer(props) {
                     anchor={anchor}
                     open={state[anchor]}
                     onClose={toggleDrawer(anchor, false)}
-                    onOpen={toggleDrawer(anchor, true)}
-                >
+                    onOpen={toggleDrawer(anchor, true)}>
                     {list(anchor)}
                 </SwipeableDrawer>
             </React.Fragment>

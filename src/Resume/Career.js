@@ -1,7 +1,7 @@
 // React
 import React from 'react';
 import PropTypes from 'prop-types';
-// Material-UI
+// Core
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
@@ -34,9 +34,9 @@ export default function Posts(props) {
   const { post } = props;
   return (
     <React.Fragment>
-        <Container className={classes.careerContainer}
+        <Container  className={classes.careerContainer}
                     maxWidth="md">
-            <Box className={classes.root}
+            <Box    className={classes.root}
                     boxShadow={4}
                     borderRadius={8}>
                 <Typography variant="h5">

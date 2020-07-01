@@ -1,9 +1,8 @@
-import eerc from './images/careerImages/eerc.jpg'
-import deloitte from './images/careerImages/deloitte.jpg'
-import tamiu from './images/careerImages/tamiu.jpg'
-import uhs from './images/careerImages/uhs.jpg'
-import fujitsu from './images/careerImages/fujitsu.jpg'
-
+import eerc from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/careerImages/eerc.jpg'
+import deloitte from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/careerImages/deloitte.jpg'
+import tamiu from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/careerImages/tamiu.jpg'
+import uhs from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/careerImages/uhs.jpg'
+import fujitsu from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/careerImages/fujitsu.jpg'
 
 const careerPosts = [
     {

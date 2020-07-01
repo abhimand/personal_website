@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// Core
 import { makeStyles } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
 import IconButton from '@material-ui/core/IconButton'
@@ -10,8 +11,6 @@ import { blueGrey } from '@material-ui/core/colors';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-// import Input from '@material-ui/core/Input';
-// import FormControl from '@material-ui/core/FormControl';
 
 const useStyles = makeStyles((theme) => ({
     typo: {
@@ -40,13 +39,19 @@ export default function Footer(props) {
         >
         <Box display="flex" justifyContent="center" >
           <Fade in={active} timeout={3000}>
-            <Typography className={classes.typo} style={{ color: 'white'}} component="h2" variant="h5">
+            <Typography component="h2" 
+                        variant="h5"
+                        className={classes.typo} 
+                        style={{ color: 'white'}}>
                 {message}
             </Typography>
           </Fade>
         </Box>
       </VizSensor>
-      <Box className={classes.boxStyles} component="span" display="flex" flexDirection="row-reverse" >
+      <Box  component="span" 
+            display="flex" 
+            flexDirection="row-reverse"
+            className={classes.boxStyles}>
         <IconButton href="https://www.facebook.com/abhishek.mandal.75/" >
           <FacebookIcon style={{ fontSize: 50, color: blueGrey[50] }} />
         </IconButton>

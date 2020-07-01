@@ -1,5 +1,7 @@
 import React from 'react';
-import profPic from './images/profPic.JPG'
+//Images
+import profPic from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/profPic.JPG'
+//Core
 import Paper from '@material-ui/core/Paper'
 import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'

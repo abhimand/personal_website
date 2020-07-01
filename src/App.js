@@ -2,15 +2,15 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // JS & CSS Files
-import Header from './Header';
-import Homepage from './Homepage';
-import Footer from './Footer';
-import Resume from './Resume';
-import Submission from './Submission'
+import Header from './Main/Header';
+import Homepage from './Home/Homepage';
+import Footer from './Main/Footer';
+import Resume from './Resume/Resume';
+import Food from './Food/Food';
+import Submission from './Main/Submission'
 import './App.css';
 // Material-UI
 import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
@@ -20,8 +20,6 @@ import skyline from './images/backgroundImages/skyline.jpg'
 import cheftable from './images/backgroundImages/cheftable.jpg'
 import flight from './images/backgroundImages/flight.jpg'
 import reflectionlake from './images/backgroundImages/reflectionlake.jpg'
-import homepageImage from './images/patterns/pattern.png'
-import { Grid } from '@material-ui/core';
 
 const theme = createMuiTheme({
   typography: {
@@ -72,11 +70,9 @@ function App() {
                     style={{ background: 'lightgrey', 
                             backgroundPosition: 'center', 
                             borderColor:'black', 
-                            }}  
-              >  
+                            }}>  
                 <Homepage content={aboutMeDescription} 
-                          title={aboutMeTitle} 
-                />
+                          title={aboutMeTitle} />
               </Box>
             </div>
           }
@@ -103,6 +99,16 @@ function App() {
           render={() => 
             <div>
               <Header title="abbyshacky" mainMessage="Food"  image={cheftable} sections={headerSections} />
+              <Box  component="div" 
+                    borderTop={5}
+                    flexWrap="wrap" 
+                    justifyContent="center" 
+                    style={{ backgroundColor: 'rgb(180,180,160)', 
+                            backgroundPosition: 'center', 
+                            borderColor:'black', 
+                            }}>  
+                <Food/>
+              </Box>
             </div>
             }
           />

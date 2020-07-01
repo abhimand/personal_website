@@ -1,6 +1,8 @@
 import React from 'react';
+// Files
 import SideDrawer from './SideDrawer';
-import './App.css';
+import '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/App.css';
+// Core
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography'
 import Toolbar from '@material-ui/core/Toolbar'
@@ -47,9 +49,11 @@ export default function Header(props) {
                 style={{    background: `url(${image})`, 
                             backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat',
-                            backgroundPosition: 'center'}}
-                >
-                    <Toolbar component="nav" variant="dense" disableGutters className={classes.toolbar}>
+                            backgroundPosition: 'center'}}>
+                    <Toolbar component="nav" 
+                             variant="dense" 
+                             disableGutters 
+                             className={classes.toolbar}>
                         <Typography
                             variant="h4"
                             className={classes.toolbarTitle}>
@@ -62,8 +66,7 @@ export default function Header(props) {
                                 variant="h1"
                                 align="center"
                                 color="inherit"
-                                className={classes.mainMessage}
-                                >
+                                className={classes.mainMessage}>
                                    {mainMessage}              
                         </Typography>
                     </Grow>
