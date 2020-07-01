@@ -51,7 +51,7 @@ export default function Header(props) {
                 >
                     <Toolbar component="nav" variant="dense" disableGutters className={classes.toolbar}>
                         <Typography
-                            variant="h5"
+                            variant="h4"
                             className={classes.toolbarTitle}>
                                 {title}
                         </Typography>

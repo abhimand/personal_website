@@ -20,11 +20,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'white',
         padding: theme.spacing(2),
     },
-    subheader: {
-        color: grey[700],
-        paddingBottom: theme.spacing(1),
-    },
-    location: {
+    contentSpacing: {
         paddingTop: theme.spacing(1),
     }
 }));
@@ -42,32 +38,11 @@ export default function Posts(props) {
                 <Typography variant="h5">
                     {post.title}  
                 </Typography>
-                
-                <Grid   justify="space-between"
-                        container
-                        className={classes.subheader}>
-                    <Typography display="inline" 
-                                variant="body2"
-                                align="left">
-                        {post.position}
-                    </Typography>
-
-                    <Typography display="inline"
-                                variant="caption"
-                                align="right">
-                            {post.date}  
-                    </Typography>
-                </Grid>
-
                 <Divider/>
-                
-                <Typography className={classes.location} 
-                            variant="subtitle1">
-                    {post.location}
-                </Typography>
-                <Typography variant="body1"
+                <Typography className={classes.contentSpacing}
+                            variant="body1"
                             paragraph>
-                    {post.description}  
+                    {post.content}  
                 </Typography>
             </Box>
         </Container>
