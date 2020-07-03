@@ -37,8 +37,8 @@ const theme = createMuiTheme({
 const headerSections = [
     { title: 'Home', url: process.env.PUBLIC_URL + '/' },
     { title: 'Resume', url: process.env.PUBLIC_URL + '/resume' },
-    { title: 'Food', url: process.env.PUBLIC_URL + '/food' },
-    { title: 'Travel', url: process.env.PUBLIC_URL + '/travel' },
+    // { title: 'Food', url: process.env.PUBLIC_URL + '/food' },
+    // { title: 'Travel', url: process.env.PUBLIC_URL + '/travel' },
 ];
 
 const aboutMeDescription = 'Hello! My name is Abhishek. I was inspired by one of my closest friends Henry Vuong to set out and create a website, although the task seemed to be more tedious than I had expected. To be honest, I am not sure what kind of content I will be posting. Whatever it may be, I hope it will provide some insightful commentary, personal mistakes of mine you can learn from, and maybe inpsire passion in you to set out and do your own good in the world.';
@@ -62,7 +62,7 @@ function App() {
             <div>
               <Header title="abbyshacky" 
                       image={reflectionlake} 
-                      mainMessage="Under Construction" 
+                      mainMessage="Personal Website" 
                       sections={headerSections} 
               />
               <Box  component="div" 
