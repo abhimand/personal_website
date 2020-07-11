@@ -1,6 +1,6 @@
 import React from 'react';
 //Images
-import profPic from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/profPic.JPG'
+import profPic from '/Users/abhi.mand/Desktop/Documents/ProgrammingProjects/personal_website/src/images/profPic.JPG'
 //Core
 import Paper from '@material-ui/core/Paper'
 import Box from '@material-ui/core/Box'

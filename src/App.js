@@ -37,7 +37,7 @@ const theme = createMuiTheme({
 const headerSections = [
     { title: 'Home', url: process.env.PUBLIC_URL + '/' },
     { title: 'Resume', url: process.env.PUBLIC_URL + '/resume' },
-    // { title: 'Food', url: process.env.PUBLIC_URL + '/food' },
+    { title: 'Food', url: process.env.PUBLIC_URL + '/food' },
     // { title: 'Travel', url: process.env.PUBLIC_URL + '/travel' },
 ];
 

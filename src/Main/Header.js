@@ -1,7 +1,7 @@
 import React from 'react';
 // Files
 import SideDrawer from './SideDrawer';
-import '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/App.css';
+// import '/Users/abhi.mand/Desktop/Documents/ProgrammingProjects/personal_website/src/App.css';
 // Core
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography'
