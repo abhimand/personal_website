@@ -1,28 +1,42 @@
 import React from 'react';
+import Image from 'material-ui-image'
+
 //Images
-import profPic from '/Users/abhi.mand/Desktop/Documents/ProgrammingProjects/personal_website/src/images/profPic.JPG'
+import gradPic from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/gradPic.jpeg'
 //Core
 import Paper from '@material-ui/core/Paper'
 import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
+import Divider from '@material-ui/core/Divider'
+import CardMedia from '@material-ui/core/CardMedia'
+
+import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
+import { grey } from '@material-ui/core/colors';
+
+import clsx from  'clsx';
+
+
+//margin is spacing between components
+//padding is spacing of component
 
 const useStyles = makeStyles((theme) => ({
-    profilePicture: {
-      background: `url(${profPic})`,
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-      width: '337px',
-      height: '450px',
+    profilePictureSpacing: {
+      padding: theme.spacing(4),
+      paddingTop: theme.spacing(0),
     },
-    marginSet: {
-      marginTop: theme.spacing(4),
+    content: {
+      paddingBottom: theme.spacing(4),
     },
-    marginLast: {
-      padding: theme.spacing(4), 
+    title: {
+      padding: theme.spacing(4)
+    
     }
+
+
+
+    
 }));
 
 export default function Body(props) {
@@ -31,22 +45,50 @@ export default function Body(props) {
 
   return (
     <React.Fragment>
-      <Container>
-        {/* Homepage title */}
-        <Typography className={classes.marginSet} variant="h4" align="center" style={{ color: '#606060'}}>
-          {title}
-        </Typography>
-        {/* Homepage content */}
-        <Box className={classes.marginSet} component="span" display="flex"  alignItems="center" justifyContent="center">
-          <Paper className={classes.profilePicture}/>
-        </Box>
-        <Box className={classes.marginLast} component="span" display="flex">
-          <Typography component="h2" variant="h5" style={{ color: '#808080'}}>
-            {content}
-          </Typography>
-        </Box>
-      </Container>
-      
+      <Typography className={classes.title}
+      align="center"
+      variant="h4">
+        {title}
+      </Typography>
+      {/* Row 1 */}
+      <Grid container justify="center" alignItems="center">
+          <Grid className={classes.profilePictureSpacing}
+          item
+          xs="auto">
+            <Paper className={classes.profilePicture}
+            component="img" 
+            width="300" 
+            height="450" 
+            src={gradPic}/>
+          </Grid>
+          <Grid xs='6' item>
+            <Typography className={classes.content}>
+              {content}
+            </Typography>
+          </Grid>
+      </Grid>
+
+      {/* Row 2 */}
+      <Grid 
+      container 
+      direction="row-reverse"
+      justify="center" 
+      alignItems="center">
+          <Grid className={classes.profilePictureSpacing}
+          item
+          xs="auto">
+            <Paper className={classes.profilePicture}
+            component="img" 
+            width="300" 
+            height="450" 
+            src={gradPic}/>
+          </Grid>
+          <Grid xs='6' item>
+            <Typography className={classes.content}>
+              {content}
+            </Typography>
+          </Grid>
+      </Grid>
     </React.Fragment>
   );
 }

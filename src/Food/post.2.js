@@ -1,8 +1,17 @@
+import fajitas1 from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/foodImages/fajitas1.jpeg'
+// ![some image](${fajitas})
+
 export default `
 
 # Sample blog post
 
-#### April 1, 2020 by [Olivier](/)
+#### April 1, 2020 by [Abhishek](/)
+
+
+<img src="${fajitas1}"
+class="image-landscape"
+alt="Ch"
+/>
 
 
 

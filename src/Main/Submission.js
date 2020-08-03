@@ -1,6 +1,6 @@
 import React from 'react';
 import SideDrawer from './SideDrawer';
-import '/Users/abhi.mand/Desktop/Documents/ProgrammingProjects/personal_website/src/App.css';
+import '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography'
 import Paper from '@material-ui/core/Typography'

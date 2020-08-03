@@ -1,0 +1,29 @@
+.image-landscape {  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  width: 70%;
+  height: 70%;
+  float:center;
+  border-radius: 1%;
+}
+
+.image-inline {  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  width: 70%;
+  height: 70%;
+  border-radius: 1%;
+
+}
+
+/* .margins {
+  margin-left: 100px;
+  margin-right: 100px;
+} */
+
+
+

@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // JS & CSS Files
 import Header from './Main/Header';
 import Homepage from './Home/Homepage';
+import SecondHomepage from './Home/SecondHomepage';
+
 import Footer from './Main/Footer';
 import Resume from './Resume/Resume';
 import Food from './Food/Food';
@@ -24,11 +26,7 @@ import reflectionlake from './images/backgroundImages/reflectionlake.jpg'
 const theme = createMuiTheme({
   typography: {
     fontFamily: [
-      'Nunito',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif'
+      'nunito',
     ].join(','),
   }
 });
@@ -41,9 +39,14 @@ const headerSections = [
     // { title: 'Travel', url: process.env.PUBLIC_URL + '/travel' },
 ];
 
-const aboutMeDescription = 'Hello! My name is Abhishek. I was inspired by one of my closest friends Henry Vuong to set out and create a website, although the task seemed to be more tedious than I had expected. To be honest, I am not sure what kind of content I will be posting. Whatever it may be, I hope it will provide some insightful commentary, personal mistakes of mine you can learn from, and maybe inpsire passion in you to set out and do your own good in the world.';
-const aboutMeTitle = 'Jack of all Trades - Master of None'
+const aboutMeDescription = 'SHORT ABOUT ME what would happen if i just keep typing and maybe inpsire passion in you to set out and do your own good in the world.';
+const aboutMeTitle = 'About me...'
 const footerMessage = 'Made with React, Material-UI, and constant frustration'
+// 
+// section of what i am currently watching, video game
+// section of what i am up to
+//
+
 
 function App() {
   return (
@@ -62,18 +65,12 @@ function App() {
             <div>
               <Header title="abbyshacky" 
                       image={reflectionlake} 
-                      mainMessage="Personal Website" 
+                      mainMessage="Hey! I'm Abhi" 
                       sections={headerSections} 
               />
-              <Box  component="div" 
-                    borderTop={5}
-                    style={{ background: 'lightgrey', 
-                            backgroundPosition: 'center', 
-                            borderColor:'black', 
-                            }}>  
-                <Homepage content={aboutMeDescription} 
-                          title={aboutMeTitle} />
-              </Box>
+              <Homepage content={aboutMeDescription} 
+                        title={aboutMeTitle} 
+              />
             </div>
           }
         />
@@ -103,7 +100,7 @@ function App() {
                     borderTop={5}
                     flexWrap="wrap" 
                     justifyContent="center" 
-                    style={{ backgroundColor: 'rgb(180,180,160)', 
+                    style={{ backgroundColor: 'lightgrey', 
                             backgroundPosition: 'center', 
                             borderColor:'black', 
                             }}>  

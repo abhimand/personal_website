@@ -1,33 +1,24 @@
-import myImageUrl from './fajitas.jpeg';
+import fajitas1 from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/foodImages/fajitas1.jpeg'
+import fajitas2 from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/foodImages/fajitas2.jpeg'
+import fajitas3 from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/foodImages/fajitas3.jpeg'
+import './Food.css';
 
 
 export default `
-# Sample blog post
+<div class="margins">
+# Starting with home: Fajitas
 
-#### April 1, 2020 by [Olivier](/)
-
-
-![some image](${myImageUrl})
+#### June 14, 2020 by [Abhishek](/)
 
 
-<img src="${myImageUrl}"
-     alt="Ch"
-     style="float: right; margin-right: 10px;" />
+
+<img src="${fajitas2}"
+class="image-landscape"
+alt="Ch"
+/>
 
 
-This blog post shows a few different types of content that are supported and styled with
-Material styles. Basic typography, images, and code are all supported.
-You can extend these by modifying Markdown.js.
-
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
-
-Curabitur blandit tempus porttitor. **Nullam quis risus eget urna mollis** ornare vel eu leo.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-
-Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum.
-Aenean lacinia bibendum nulla sed consectetur.
+After years of unpalatable dorm food, I found my passion for cooking after living alone. Instant ramen was not cutting it. I began following reputable food bloggers on different social media platforms. 
 
 ## Heading
 
@@ -39,6 +30,10 @@ Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
 
 Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
+<img src="${fajitas1}"
+class="image-inline"
+alt="Ch"
+/>
 ### Sub-heading
 
 Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
@@ -52,8 +47,16 @@ sit amet risus.
 
 Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.
 
+<img src="${fajitas3}"
+class="image-inline"
+alt="Ch"
+/>
+
 1.  Vestibulum id ligula porta felis euismod semper.
 2.  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 3.  Maecenas sed diam eget risus varius blandit sit amet non magna.
 
-Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.`
+Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.
+
+</div>
+`

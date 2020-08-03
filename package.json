@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^7.1.2",
     "history": "^5.0.0",
     "markdown-to-jsx": "^6.11.4",
+    "material-ui-image": "^3.2.3",
     "react": "^16.13.1",
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.13.1",

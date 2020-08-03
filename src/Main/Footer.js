@@ -42,7 +42,8 @@ export default function Footer(props) {
             <Typography component="h2" 
                         variant="h5"
                         className={classes.typo} 
-                        style={{ color: 'white'}}>
+                        style={{ color: 'white'}}
+                        align="center">
                 {message}
             </Typography>
           </Fade>

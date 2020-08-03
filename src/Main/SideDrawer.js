@@ -19,8 +19,14 @@ import PersonIcon from '@material-ui/icons/Person';
 
 const useStyles = makeStyles((theme) => ({
     list: {
-        width: 200,
+        width: 300,
         color: 'white',
+        justifyContent: 'center',
+    },
+    listInner: {
+      marginTop: theme.spacing(30),
+      marginBottom: theme.spacing(30),
+
     },
     paper: {
         background: "linear-gradient(0deg, rgba(0,11,28,1) 0%, rgba(19,49,87,1) 100%)",
@@ -56,7 +62,7 @@ export default function SideDrawer(props) {
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}>
-      <List >
+      <List className={classes.listInner}>
         {sections.map((section) => (
           <ListItem button 
                     key={section.title} 

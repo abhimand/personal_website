@@ -8,6 +8,9 @@ const styles = (theme) => ({
   listItem: {
     marginTop: theme.spacing(1),
   },
+  margins: {
+    margin: theme.spacing(5),
+  }
 });
 
 const options = {
@@ -38,5 +41,5 @@ const options = {
 };
 
 export default function Markdown(props) {
-  return <ReactMarkdown options={options} {...props} />;
+  return <ReactMarkdown styles={{margin: 10}} options={options} {...props} />;
 }

@@ -9,6 +9,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Paper from '@material-ui/core/Paper'
 import Fade from '@material-ui/core/Fade'
 import Grow from '@material-ui/core/Grow'
+import Link from '@material-ui/core/Link'
 import blueGrey from '@material-ui/core/colors/blueGrey'
 
 const useStyles = makeStyles((theme) => ({
@@ -38,6 +39,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header(props) {
     const {sections, title, image, mainMessage} = props;
+    const preventDefault = (event) => event.preventDefault();
+
     const classes = useStyles();
     return (
         <React.Fragment className={classes.frag}>
@@ -69,6 +72,7 @@ export default function Header(props) {
                                 className={classes.mainMessage}>
                                    {mainMessage}              
                         </Typography>
+                        
                     </Grow>
                 </Paper>
             </Fade>
