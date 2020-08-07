@@ -85,7 +85,7 @@ export default function SideDrawer(props) {
         {["right"].map(anchor => (
             <React.Fragment key={anchor}>
                 <IconButton onClick={toggleDrawer(anchor, true)} > 
-                    <DehazeIcon style={{ fontSize: 50}}/> 
+                    <DehazeIcon style={{ fontSize: 50, color: 'white'}}/> 
                 </IconButton>
                 <SwipeableDrawer
                     classes={{ paper: classes.paper }}

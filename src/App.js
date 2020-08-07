@@ -4,8 +4,6 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // JS & CSS Files
 import Header from './Main/Header';
 import Homepage from './Home/Homepage';
-import SecondHomepage from './Home/SecondHomepage';
-
 import Footer from './Main/Footer';
 import Resume from './Resume/Resume';
 import Food from './Food/Food';
@@ -18,6 +16,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 
 // Header Images
+import utaustin from './images/backgroundImages/utaustin.jpeg'
 import skyline from './images/backgroundImages/skyline.jpg'
 import cheftable from './images/backgroundImages/cheftable.jpg'
 import flight from './images/backgroundImages/flight.jpg'
@@ -34,13 +33,13 @@ const theme = createMuiTheme({
 
 const headerSections = [
     { title: 'Home', url: process.env.PUBLIC_URL + '/' },
-    { title: 'Resume', url: process.env.PUBLIC_URL + '/resume' },
+    // { title: 'Resume', url: process.env.PUBLIC_URL + '/resume' },
     { title: 'Food', url: process.env.PUBLIC_URL + '/food' },
     // { title: 'Travel', url: process.env.PUBLIC_URL + '/travel' },
 ];
 
 const aboutMeDescription = 'SHORT ABOUT ME what would happen if i just keep typing and maybe inpsire passion in you to set out and do your own good in the world.';
-const aboutMeTitle = 'About me...'
+const aboutMeTitle = 'About me'
 const footerMessage = 'Made with React, Material-UI, and constant frustration'
 // 
 // section of what i am currently watching, video game
@@ -57,24 +56,23 @@ function App() {
     {/* Routes */}
     <BrowserRouter>
       <Switch>
-        {/* Home Page - FINISHED */}
+        {/************************* Home Page *************************/}
         <Route 
           exact
           path={process.env.PUBLIC_URL + "/"}
           render={() => 
             <div>
-              <Header title="abbyshacky" 
-                      image={reflectionlake} 
-                      mainMessage="Hey! I'm Abhi" 
-                      sections={headerSections} 
-              />
-              <Homepage content={aboutMeDescription} 
-                        title={aboutMeTitle} 
-              />
+              <Header 
+              title="abbyshacky" 
+              image={reflectionlake} 
+              mainMessage="Hey! I'm Abhi" 
+              sections={headerSections}/>
+              <Homepage 
+              content={aboutMeDescription} 
+              title={aboutMeTitle}/>
             </div>
-          }
-        />
-        {/* Resume */}
+          }/>
+        {/************************* Resume *************************/}
         <Route
           exact
           path={process.env.PUBLIC_URL + "/resume"}
@@ -89,7 +87,7 @@ function App() {
             </div>
             }
           />
-        {/* Food */}
+        {/************************* Food *************************/}
         <Route 
           exact
           path={process.env.PUBLIC_URL + "/Food"}
@@ -97,19 +95,17 @@ function App() {
             <div>
               <Header title="abbyshacky" mainMessage="Food"  image={cheftable} sections={headerSections} />
               <Box  component="div" 
-                    borderTop={5}
                     flexWrap="wrap" 
                     justifyContent="center" 
-                    style={{ backgroundColor: 'lightgrey', 
+                    style={{  
                             backgroundPosition: 'center', 
-                            borderColor:'black', 
                             }}>  
                 <Food/>
               </Box>
             </div>
             }
           />
-        {/* Travel */}
+        {/************************* Travel *************************/}
         <Route 
           exact
           path={process.env.PUBLIC_URL + "/Travel"}

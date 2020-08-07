@@ -1,13 +1,15 @@
-import React from 'react';
+import React from 'react'
+import Fade from 'react-reveal/Fade'
+import Slide from 'react-reveal/Slide'
+
 // Files
 import SideDrawer from './SideDrawer';
 // import '/Users/abhi.mand/Desktop/Documents/ProgrammingProjects/personal_website/src/App.css';
 // Core
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Toolbar from '@material-ui/core/Toolbar'
 import Paper from '@material-ui/core/Paper'
-import Fade from '@material-ui/core/Fade'
 import Grow from '@material-ui/core/Grow'
 import Link from '@material-ui/core/Link'
 import blueGrey from '@material-ui/core/colors/blueGrey'
@@ -18,17 +20,19 @@ const useStyles = makeStyles((theme) => ({
     },
     toolbarTitle: {
         padding: theme.spacing(1), 
-        color: blueGrey[700],
+        // color: blueGrey[700],
+        color: theme.palette.common.white,
         marginRight: 'auto',
     },
     toolbarButton: {
         padding: theme.spacing(2),
-        color: blueGrey[700],
+        // color: blueGrey[700],
+        color: theme.palette.common.white,
     },
     mainMessage: {
         color: theme.palette.common.white,
-        paddingTop: theme.spacing(45),
-        paddingBottom: theme.spacing(60),
+        paddingTop: theme.spacing(30),
+        paddingBottom: theme.spacing(45),
 
     },
     paperImage: {
@@ -44,12 +48,10 @@ export default function Header(props) {
     const classes = useStyles();
     return (
         <React.Fragment className={classes.frag}>
-            <Fade in timeout={2500}>
-                <Paper
+                <Paper className={classes.paperImage} 
                 variant="outlined"
-                className={classes.paperImage} 
                 square="true"
-                style={{    background: `url(${image})`, 
+                style={{    background: 'radial-gradient(circle, rgba(35,59,96,1) 0%, rgba(25,39,60,1) 100%)', 
                             backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat',
                             backgroundPosition: 'center'}}>
@@ -57,25 +59,29 @@ export default function Header(props) {
                              variant="dense" 
                              disableGutters 
                              className={classes.toolbar}>
-                        <Typography
-                            variant="h4"
-                            className={classes.toolbarTitle}>
-                                {title}
+                        
+                        <Typography className={classes.toolbarTitle}
+                        variant="h4">
+                            <Slide top>
+                                <Link 
+                                href="/" 
+                                underline="none" 
+                                color="inherit">
+                                    {title}
+                                </Link>
+                            </Slide>
                         </Typography>
                         <SideDrawer sections={sections}/>
                     </Toolbar>
-                    <Grow in timeout={6500}>
-                        <Typography
-                                variant="h1"
-                                align="center"
-                                color="inherit"
-                                className={classes.mainMessage}>
-                                   {mainMessage}              
+                    <Fade bottom timeout={1500}>
+                        <Typography className={classes.mainMessage}
+                        variant="h1"
+                        align="center"
+                        color="inherit">
+                            {mainMessage}              
                         </Typography>
-                        
-                    </Grow>
+                    </Fade>
                 </Paper>
-            </Fade>
         </React.Fragment>
     )
 }
