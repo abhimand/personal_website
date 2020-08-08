@@ -2,40 +2,32 @@ import React from 'react'
 import Zoom from 'react-reveal/Zoom' // Importing Zoom effect
 import Slide from 'react-reveal/Slide' // Importing Zoom effect
 import Fade from 'react-reveal/Fade' // Importing Zoom effect
-
 //Images
-import gradPic3 from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/gradPic3.jpeg'
-import profPic from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/profPic.JPG'
+import gradPic from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/gradPic.jpeg'
 import group from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/group.jpeg'
-import group2 from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/group2.JPG'
-import hatSolo from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/hatSolo.jpg'
+import pair from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/pair.JPG'
 //Core
 import Paper from '@material-ui/core/Paper'
 import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
 import Link from '@material-ui/core/Link'
-
-import Container from '@material-ui/core/Container'
-import Divider from '@material-ui/core/Divider'
-
 import Grid from '@material-ui/core/Grid'
+import Divider from '@material-ui/core/Divider'
 import { makeStyles } from '@material-ui/core/styles'
-import { grey } from '@material-ui/core/colors'
-
-import clsx from  'clsx';
-
 
 //margin is spacing between components
 //padding is spacing of component
 
 const useStyles = makeStyles((theme) => ({
     content: {
-      paddingBottom: theme.spacing(2),
+      paddingTop: theme.spacing(2),
+      paddingBottom: theme.spacing(0),
     },
     title: {
-      padding: theme.spacing(4),
+      paddingTop: theme.spacing(4),
     },
     gridSpacing: {
+      paddingTop: theme.spacing(10),
       paddingBottom: theme.spacing(10),
     }
 }));
@@ -48,7 +40,7 @@ export default function Body(props) {
   return (
     <React.Fragment>
       <Box style={{background: 'rgb(230,233,240)'}}>
-        {/*Title*/}
+        {/************************* Title *************************/}
         <Zoom delay={500}>
           <Typography className={classes.title}
           align="center"
@@ -71,7 +63,7 @@ export default function Body(props) {
             xs="auto">
               <Slide left duration={500}>
                 <Paper 
-                  src={gradPic3}
+                  src={gradPic}
                   component="img" 
                   width="330" 
                   height="360"/>
@@ -90,6 +82,9 @@ export default function Body(props) {
               </Typography>
             </Grid>
         </Grid>
+ 
+        <Divider variant="middle"/>
+      
 
         {/************************ Row 2 ************************/}
         <Grid className={classes.gridSpacing} 
@@ -105,7 +100,8 @@ export default function Body(props) {
                 component="img" 
                 width="360" 
                 height="270" 
-                src={group2}/>
+                src={pair
+              }/>
             </Slide>
             </Grid>
             <Grid 
@@ -135,6 +131,9 @@ export default function Body(props) {
               </Typography>
             </Grid>
         </Grid>
+
+        <Divider variant="middle"/>
+
 
         {/************************ Row 3 ************************/}
         <Grid className={classes.gridSpacing} 

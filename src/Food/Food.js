@@ -15,17 +15,10 @@ const useStyles = makeStyles((theme) => ({
         ...theme.typography.body2,
         padding: theme.spacing(3, 0),
         paddingBottom: theme.spacing(20),
-        color: '#606060',
-
     },
     boxSpacing: {
         paddingLeft: theme.spacing(45), 
         paddingRight: theme.spacing(45),
-    },
-    root: {
-        backgroundColor: 'rgb(180,180,160)', //beige - 180,180,160 | grey - 100, 100, 100
-        color: 'white',
-        padding: theme.spacing(2),
     },
   }));
 

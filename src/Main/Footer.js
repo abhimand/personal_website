@@ -1,81 +1,99 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import Fade from 'react-reveal/Fade'
 // Core
 import { makeStyles } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
+import Icon from '@material-ui/core/Icon'
+import Button from '@material-ui/core/Button'
 import IconButton from '@material-ui/core/IconButton'
 import Typography from '@material-ui/core/Grid'
-import VizSensor from 'react-visibility-sensor'
-import Fade from '@material-ui/core/Fade';
-import { blueGrey } from '@material-ui/core/colors';
+import { blueGrey } from '@material-ui/core/colors'
 // Icons
-import FacebookIcon from '@material-ui/icons/Facebook';
+import FacebookIcon from '@material-ui/icons/Facebook'
 import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import { Link } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
-    typo: {
-      margin: theme.spacing(0),
-      paddingTop: theme.spacing(8)
+    contact: {
+      paddingTop: theme.spacing(10)
     },
-    boxStyles: {
+    icons: {
       color: 'white',
       paddingRight: theme.spacing(4),
-      paddingBottom: theme.spacing(4),
     },
+    copy: {
+    },
+    footerEnd: {
+      background: 'rgb(32,32,32)',
+    },
+    email: {
+      paddingBottom: theme.spacing(20),
+    }
 }));
 
 export default function Footer(props) {
   const {message} = props; 
   const classes = useStyles();
-  let [active, setActive] = useState(false);
 
   return (
     <React.Fragment>
-      <VizSensor 
-        partialVisibility
-        onChange={(isVisible) => {
-            setActive(isVisible); 
-        }}
-        >
-        <Box display="flex" justifyContent="center" >
-          <Fade in={active} timeout={3000}>
-            <Typography component="h2" 
-                        variant="h5"
-                        className={classes.typo} 
-                        style={{ color: 'white'}}
-                        align="center">
-                {message}
+      <Box style={{ background: 'radial-gradient(circle, rgba(35,59,96,1) 0%, rgba(25,39,60,1) 100%)'}}>
+      
+        {/****** Email ******/}
+        <Box 
+        display="flex" 
+        justifyContent="center">
+          <Fade top delay={500}>
+            <Typography 
+              component="h1" 
+              className={classes.contact} 
+              style={{ color: 'white'}}
+              align="center">
+                Let's get in touch
             </Typography>
           </Fade>
         </Box>
-      </VizSensor>
-      <Box  component="span" 
-            display="flex" 
-            flexDirection="row-reverse"
-            className={classes.boxStyles}>
-        <IconButton href="https://www.facebook.com/abhishek.mandal.75/" >
-          <FacebookIcon style={{ fontSize: 50, color: blueGrey[50] }} />
-        </IconButton>
-        <IconButton href="https://github.com/abhimand/" >
-          <GitHubIcon style={{ fontSize: 50, color: blueGrey[50] }} />
-        </IconButton>
-        <IconButton href="https://www.linkedin.com/in/aemandal/" >
-          <LinkedInIcon style={{ fontSize: 50, color: blueGrey[50] }} />
-        </IconButton>
-      </Box>
+        <Box className={classes.email}
+        display="flex" 
+        justifyContent="center">
+          <Fade bottom delay={500}>
+            <Button
+              variant="contained"
+              href="mailto:abmand98@gmail.com">
+                Email
+            </Button>
+          </Fade>
+        </Box>
 
-      {/* form control to follow */}
-      {/* <form  action="https://getsimpleform.com/messages?form_api_token=ab1cc309b57edc613600e676540b4675" method="post">
-        <FormControl> */}
-          {/* <!-- the redirect_to is optional, the form will redirect to the referrer on submission --> */}
-          {/* <Input type='hidden' name='redirect_to' value='https://www.abbyshacky.com/submission' /> */}
-          {/* <!-- all your input fields here.... --> */}
-          {/* <Input type="text" name="Name"/>
-          <Input type="text" name="Email"/>
-          <Input type="text" name="Feedback"/>
-          <Input type="submit" name="Submit!"/>
-        </FormControl>
-      </form> */}
+        {/*************** Copy, Message, & Icons  *************/}
+        <Box className={classes.footerEnd}
+        display="flex" 
+        alignItems="center" >
+          <Box  p={1} flexGrow={1}>
+            <Typography 
+            className={classes.copy} 
+            style={{ color: 'white'}}>
+              Copyright Abhishek E. Mandal 2020
+            </Typography>
+          </Box>
+          <Box  
+          component="span" 
+          display="flex" 
+          flexDirection="row-reverse"
+          className={classes.icons}>
+            <IconButton href="https://www.facebook.com/abhishek.mandal.75/" >
+              <FacebookIcon style={{ fontSize: 40, color: blueGrey[50] }} />
+            </IconButton>
+            <IconButton href="https://github.com/abhimand/" >
+              <GitHubIcon style={{ fontSize: 40, color: blueGrey[50] }} />
+            </IconButton>
+            <IconButton href="https://www.linkedin.com/in/aemandal/" >
+              <LinkedInIcon style={{ fontSize: 40, color: blueGrey[50] }} />
+            </IconButton>
+          </Box>
+        </Box>
+      </Box>
     </React.Fragment>
   );
 }
