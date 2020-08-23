@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4457f9b0175f8c46e0aea37dcdf08ee0",
+    "revision": "38e8cd88a0dd48511a6d0f2ecb84b1c4",
     "url": "/index.html"
   },
   {
-    "revision": "2a52bd69957a98eb2765",
-    "url": "/static/css/main.b8019721.chunk.css"
+    "revision": "cd20f69a01329bcf74d3",
+    "url": "/static/css/main.8c357167.chunk.css"
   },
   {
-    "revision": "a2210294aa063ff170a6",
-    "url": "/static/js/2.cb1c7c7c.chunk.js"
+    "revision": "1c33ad299e00ae214b4b",
+    "url": "/static/js/2.f13f9c2c.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/static/js/2.cb1c7c7c.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.f13f9c2c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2a52bd69957a98eb2765",
-    "url": "/static/js/main.c08afba6.chunk.js"
+    "revision": "cd20f69a01329bcf74d3",
+    "url": "/static/js/main.bcff0e6d.chunk.js"
   },
   {
     "revision": "216563cf50e7c35b2f13",
     "url": "/static/js/runtime-main.7c0ae09a.js"
+  },
+  {
+    "revision": "f5d7ff7667e985693c35e1f53ecf936f",
+    "url": "/static/media/AEM_Resume.f5d7ff76.pdf"
   },
   {
     "revision": "dda098eaac6dcd058e6059946e5af467",
@@ -30,6 +34,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9107a15794915c48bcae1f51df922555",
     "url": "/static/media/deloitte.9107a157.jpg"
+  },
+  {
+    "revision": "28a1a3f19aa5338d207df828e0b47c33",
+    "url": "/static/media/fajitas.28a1a3f1.jpeg"
   },
   {
     "revision": "6c799f418578c1726b84347d88977144",
@@ -74,13 +82,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "cb43f7423f667ec5e79028cfcf143008",
     "url": "/static/media/tamiu.cb43f742.jpg"
-  },
-  {
-    "revision": "915b5f26a4c35f415b1096c71cce0dd7",
-    "url": "/static/media/uhs.915b5f26.jpg"
-  },
-  {
-    "revision": "bef49b3c79bfbae7fc7024f10eb52c68",
-    "url": "/static/media/utaustin.bef49b3c.jpeg"
   }
 ]);
