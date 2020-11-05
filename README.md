@@ -1,5 +1,5 @@
 # Personal Website
-
+I coded my own website for fun shortly after graduation. I will be honest. This code is not at all tasteful. In fact, it is disgusting and messy. But I did learn a lot about JavaScript and had quite a bit of fun.
 
 <!-- *06/17/2020* My laptop motherboard just got fried and I am currently out of town, so project will have to be on hold for now until I get a new laptop.
 
