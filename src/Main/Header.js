@@ -1,7 +1,6 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
 import Slide from 'react-reveal/Slide'
-
 // Files
 import SideDrawer from './SideDrawer';
 // import '/Users/abhi.mand/Desktop/Documents/ProgrammingProjects/personal_website/src/App.css';
@@ -10,9 +9,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Toolbar from '@material-ui/core/Toolbar'
 import Paper from '@material-ui/core/Paper'
-import Grow from '@material-ui/core/Grow'
 import Link from '@material-ui/core/Link'
-import blueGrey from '@material-ui/core/colors/blueGrey'
 
 const useStyles = makeStyles((theme) => ({
     toolbar: {
@@ -42,8 +39,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function Header(props) {
-    const {sections, title, image, mainMessage} = props;
-    const preventDefault = (event) => event.preventDefault();
+    const {sections, title, mainMessage} = props;
 
     const classes = useStyles();
     return (

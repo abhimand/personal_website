@@ -2,6 +2,7 @@ import React from 'react'
 import Zoom from 'react-reveal/Zoom' // Importing Zoom effect
 import Slide from 'react-reveal/Slide' // Importing Zoom effect
 import Fade from 'react-reveal/Fade' // Importing Zoom effect
+import Pdf from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/Home/AEM_Resume.pdf'
 //Images
 import gradPic from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/gradPic.jpeg'
 import group from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/group.jpeg'
@@ -22,20 +23,22 @@ const useStyles = makeStyles((theme) => ({
     content: {
       paddingTop: theme.spacing(2),
       paddingBottom: theme.spacing(0),
+      paddingLeft: theme.spacing(4),
+      paddingRight: theme.spacing(4),
+
     },
     title: {
       paddingTop: theme.spacing(4),
     },
     gridSpacing: {
-      paddingTop: theme.spacing(10),
-      paddingBottom: theme.spacing(10),
+      paddingTop: theme.spacing(5),
+      paddingBottom: theme.spacing(5),
     }
 }));
 
 export default function Body(props) {
-  const {content, title} = props;
+  const {title} = props;
   const classes = useStyles();
-  const preventDefault = (event) => event.preventDefault();
 
   return (
     <React.Fragment>
@@ -71,7 +74,7 @@ export default function Body(props) {
             </Grid>
             <Grid  
             item
-            xs="6">
+            md="5">
               <Typography className={classes.content} 
               variant="h5">
                 <Fade bottom delay={500}>
@@ -95,7 +98,7 @@ export default function Body(props) {
             <Grid 
             item
             xs="auto">
-            <Slide right duration={500}>
+            <Slide left duration={500}>
               <Paper
                 component="img" 
                 width="360" 
@@ -105,7 +108,7 @@ export default function Body(props) {
             </Slide>
             </Grid>
             <Grid 
-            xs="6" 
+            md="5" 
             item>
               <Typography className={classes.content} 
               variant="h5">
@@ -124,7 +127,7 @@ export default function Body(props) {
               <Typography className={classes.content} 
               variant="h5">
                 <Fade bottom delay={500}>
-                  <Link href="https://www.dropbox.com/s/2eha3y4f3mt49su/Abhishek%20Emil%20Mandal_Resume.pdf?dl=0">
+                  <Link href={Pdf} target = "_blank">
                     Here is a link to my resume if you're interested 
                   </Link>                
                 </Fade>
@@ -133,8 +136,7 @@ export default function Body(props) {
         </Grid>
 
         <Divider variant="middle"/>
-
-
+        
         {/************************ Row 3 ************************/}
         <Grid className={classes.gridSpacing} 
         container 
@@ -152,27 +154,27 @@ export default function Body(props) {
                 src={group}/>
               </Slide>
             </Grid>
-            <Grid xs="6" item>
+            <Grid 
+            md="5" 
+            item>
             <Typography  variant="h5" className={classes.content}>
               <Fade bottom delay={500}>
-                  I am a sci-fi enthusianst, a huge pasta fanatic, and a decent programmer.
-                  I was inspired by my good friend Henry to create this website for myself (you 
+                  I am a sci-fi enthusiast, a huge pasta fanatic, and a decent programmer.
+                  My good friend Henry inspired me to create this website for myself (you 
                   can check out his website in the link down below). I am not sure what kind of 
                   content I will be sharing here. Whatever it may be, I do hope that I can provide 
-                  some introspection or inspiration for yourself, or maybe some humor to pass the time.
+                  some introspection or inspiration for yourself. Or you could stalk me, that works too. 
                 </Fade>
               </Typography>
               <Typography  variant="h5" className={classes.content}>
                 <Fade bottom delay={500}>
-                  <Link href="https://mistersquiish.github.io/personal-website-v2/"> 
+                  <Link href="https://henryvuong.com/"> 
                     Henry's Inferior Website 
                   </Link>
                 </Fade>
               </Typography>
             </Grid>
         </Grid>
-
-
       </Box>
     </React.Fragment>
   );

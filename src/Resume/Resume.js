@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 // JS Files
 import Career from './Career';
 import CareerPosts from './CareerPosts';
@@ -13,17 +13,6 @@ import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
 import { grey } from '@material-ui/core/colors';
-
-/*
-Things I want to implement: 
- - Education: single card compiling major, focuses, and courses
- - Revamp career information (may need to refactor who knows)
- - add list of skills (may be in a interesting format?)
- - add projects (same format as career cards)
- - add leadership (academic advisor/ recruitment director)
- - Collapse functionality for each section
- - 
-*/
 
 const useStyles = makeStyles((theme) => ({
     typoHeader: {
@@ -142,7 +131,6 @@ export default function Resume(props) {
             <Box    display="flex" 
                     justifyContent="flex-start" 
                     flexWrap="wrap" 
-                    justifyContent="center" 
                     style={{ background: 'lightgrey'}}>
                 {SkillsPosts.map((skill) => (
                     <Container  className={classes.containerResume}

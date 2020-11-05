@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Fade from 'react-reveal/Fade'
 // Core
 import { makeStyles } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
-import Icon from '@material-ui/core/Icon'
 import Button from '@material-ui/core/Button'
 import IconButton from '@material-ui/core/IconButton'
 import Typography from '@material-ui/core/Grid'
@@ -12,7 +11,6 @@ import { blueGrey } from '@material-ui/core/colors'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
-import { Link } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     contact: {
@@ -20,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     },
     icons: {
       color: 'white',
-      paddingRight: theme.spacing(4),
+      paddingRight: theme.spacing(),
     },
     copy: {
     },
@@ -33,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Footer(props) {
-  const {message} = props; 
   const classes = useStyles();
 
   return (
