@@ -2,11 +2,11 @@ import React from 'react'
 import Zoom from 'react-reveal/Zoom' // Importing Zoom effect
 import Slide from 'react-reveal/Slide' // Importing Zoom effect
 import Fade from 'react-reveal/Fade' // Importing Zoom effect
-import Pdf from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/Home/AEM_Resume.pdf'
+import Pdf from './AEM_Resume.pdf'
 //Images
-import gradPic from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/gradPic.jpeg'
-import group from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/group.jpeg'
-import pair from '/Users/abhi.mand/Documents/ProgrammingProjects/personal_website/src/images/pair.JPG'
+import gradPic from '../images/gradPic.jpeg'
+import group from '../images/group.jpeg'
+import pair from '../images/pair.JPG'
 //Core
 import Paper from '@material-ui/core/Paper'
 import Box from '@material-ui/core/Box'
@@ -78,9 +78,9 @@ export default function Body(props) {
               <Typography className={classes.content} 
               variant="h5">
                 <Fade bottom delay={500}>
-                  <Box fontStyle="oblique" fontWeight="fontWeightBold">
+                  {/* <Box fontStyle="oblique" fontWeight="fontWeightBold"> */}
                     I like meeting new folks, exploring new habits, and stepping outside of my comfort zone...
-                  </Box>
+                  {/* </Box> */}
                 </Fade>
               </Typography>
             </Grid>

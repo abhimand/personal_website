@@ -67,7 +67,7 @@ export default function Header(props) {
                                 </Link>
                             </Slide>
                         </Typography>
-                        <SideDrawer sections={sections}/>
+                        {/* <SideDrawer sections={sections}/> */}
                     </Toolbar>
                     <Fade bottom timeout={1500}>
                         <Typography className={classes.mainMessage}
