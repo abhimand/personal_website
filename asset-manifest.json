@@ -1,37 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.08a1ccc6.chunk.css",
-    "main.js": "/static/js/main.749ea8f0.chunk.js",
-    "main.js.map": "/static/js/main.749ea8f0.chunk.js.map",
+    "main.css": "/static/css/main.145668e5.chunk.css",
+    "main.js": "/static/js/main.5c7e0069.chunk.js",
+    "main.js.map": "/static/js/main.5c7e0069.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7c0ae09a.js",
     "runtime-main.js.map": "/static/js/runtime-main.7c0ae09a.js.map",
-    "static/js/2.af4bc121.chunk.js": "/static/js/2.af4bc121.chunk.js",
-    "static/js/2.af4bc121.chunk.js.map": "/static/js/2.af4bc121.chunk.js.map",
+    "static/js/2.6cf5870d.chunk.js": "/static/js/2.6cf5870d.chunk.js",
+    "static/js/2.6cf5870d.chunk.js.map": "/static/js/2.6cf5870d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.3876bf64a7f72cc2847d96e5c39f85c1.js": "/precache-manifest.3876bf64a7f72cc2847d96e5c39f85c1.js",
+    "precache-manifest.7e02d6d1afbd63a8e15537c43e7edece.js": "/precache-manifest.7e02d6d1afbd63a8e15537c43e7edece.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.08a1ccc6.chunk.css.map": "/static/css/main.08a1ccc6.chunk.css.map",
-    "static/js/2.af4bc121.chunk.js.LICENSE.txt": "/static/js/2.af4bc121.chunk.js.LICENSE.txt",
+    "static/css/main.145668e5.chunk.css.map": "/static/css/main.145668e5.chunk.css.map",
+    "static/js/2.6cf5870d.chunk.js.LICENSE.txt": "/static/js/2.6cf5870d.chunk.js.LICENSE.txt",
     "static/media/AEM_Resume.pdf": "/static/media/AEM_Resume.fb0307ec.pdf",
-    "static/media/cheftable.jpg": "/static/media/cheftable.dda098ea.jpg",
-    "static/media/deloitte.jpg": "/static/media/deloitte.9107a157.jpg",
-    "static/media/fajitas.jpeg": "/static/media/fajitas.28a1a3f1.jpeg",
-    "static/media/fajitas1.jpeg": "/static/media/fajitas1.6c799f41.jpeg",
-    "static/media/fajitas2.jpeg": "/static/media/fajitas2.a6115eb0.jpeg",
-    "static/media/fajitas3.jpeg": "/static/media/fajitas3.3e2b86a3.jpeg",
+    "static/media/IMG_5361.jpeg": "/static/media/IMG_5361.59ad745b.jpeg",
     "static/media/flight.jpg": "/static/media/flight.fb50e7d2.jpg",
-    "static/media/fujitsu.jpg": "/static/media/fujitsu.4d934907.jpg",
-    "static/media/gradPic.jpeg": "/static/media/gradPic.834d61c6.jpeg",
     "static/media/group.jpeg": "/static/media/group.01ff6b92.jpeg",
     "static/media/pair.JPG": "/static/media/pair.e111871a.JPG",
-    "static/media/reflectionlake.jpg": "/static/media/reflectionlake.77e6ec30.jpg",
-    "static/media/skyline.jpg": "/static/media/skyline.43bc6395.jpg",
-    "static/media/tamiu.jpg": "/static/media/tamiu.cb43f742.jpg"
+    "static/media/reflectionlake.jpg": "/static/media/reflectionlake.77e6ec30.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.7c0ae09a.js",
-    "static/js/2.af4bc121.chunk.js",
-    "static/css/main.08a1ccc6.chunk.css",
-    "static/js/main.749ea8f0.chunk.js"
+    "static/js/2.6cf5870d.chunk.js",
+    "static/css/main.145668e5.chunk.css",
+    "static/js/main.5c7e0069.chunk.js"
   ]
 }
