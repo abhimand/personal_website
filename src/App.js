@@ -5,8 +5,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './Main/Header';
 import Homepage from './Home/Homepage';
 import Footer from './Main/Footer';
-import Resume from './Resume/Resume';
-import Food from './Food/Food';
+// import Resume from './Resume/Resume';
+// import Food from './Food/Food';
 import './App.css';
 // Material-UI
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -14,8 +14,6 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 
 // Header Images
-import skyline from './images/backgroundImages/skyline.jpg'
-import cheftable from './images/backgroundImages/cheftable.jpg'
 import flight from './images/backgroundImages/flight.jpg'
 import reflectionlake from './images/backgroundImages/reflectionlake.jpg'
 
@@ -35,7 +33,7 @@ const headerSections = [
     // { title: 'Travel', url: process.env.PUBLIC_URL + '/travel' },
 ];
 
-const aboutMeDescription = 'SHORT ABOUT ME what would happen if i just keep typing and maybe inpsire passion in you to set out and do your own good in the world.';
+const aboutMeDescription = 'fill in later';
 const aboutMeTitle = 'About me'
 const footerMessage = 'Made with React, Material-UI, and a whole lot of frustration...'
 
@@ -57,7 +55,7 @@ function App() {
               <Header 
               title="abbyshacky" 
               image={reflectionlake} 
-              mainMessage="Hey! I'm Abhi" 
+              mainMessage="Hey, I'm Abhi!" 
               sections={headerSections}/>
               <Homepage 
               content={aboutMeDescription} 
@@ -65,7 +63,7 @@ function App() {
             </div>
           }/>
         {/************************* Resume *************************/}
-        <Route
+        {/* <Route
           exact
           path={process.env.PUBLIC_URL + "/resume"}
           render={() => 
@@ -78,9 +76,9 @@ function App() {
               <Resume />
             </div>
             }
-          />
+          /> */}
         {/************************* Food *************************/}
-        <Route 
+        {/* <Route 
           exact
           path={process.env.PUBLIC_URL + "/Food"}
           render={() => 
@@ -89,7 +87,7 @@ function App() {
               <Food/>
             </div>
             }
-          />
+          /> */}
         {/************************* Travel *************************/}
         <Route 
           exact

@@ -14,19 +14,17 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn'
 
 const useStyles = makeStyles((theme) => ({
     contact: {
-      paddingTop: theme.spacing(10)
+      paddingTop: theme.spacing(30)
     },
     icons: {
       color: 'white',
       paddingRight: theme.spacing(),
     },
-    copy: {
-    },
     footerEnd: {
       background: 'rgb(32,32,32)',
     },
     email: {
-      paddingBottom: theme.spacing(20),
+      paddingBottom: theme.spacing(30),
     }
 }));
 
@@ -35,7 +33,7 @@ export default function Footer(props) {
 
   return (
     <React.Fragment>
-      <Box style={{ background: 'radial-gradient(circle, rgba(35,59,96,1) 0%, rgba(25,39,60,1) 100%)'}}>
+      <Box style={{ background: 'radial-gradient(circle, rgba(8,69,116,1) 0%, rgba(21,37,71,1) 100%)'}}>
       
         {/****** Email ******/}
         <Box 
@@ -67,11 +65,10 @@ export default function Footer(props) {
         <Box className={classes.footerEnd}
         display="flex" 
         alignItems="center" >
-          <Box  p={1} flexGrow={1}>
+          <Box  p={5} flexGrow={1}>
             <Typography 
-            className={classes.copy} 
             style={{ color: 'white'}}>
-              Copyright Abhishek E. Mandal 2020
+              <b>Copyright Abhishek E. Mandal 2020</b>
             </Typography>
           </Box>
           <Box  

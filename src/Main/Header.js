@@ -2,7 +2,7 @@ import React from 'react'
 import Fade from 'react-reveal/Fade'
 import Slide from 'react-reveal/Slide'
 // Files
-import SideDrawer from './SideDrawer';
+// import SideDrawer from './SideDrawer';
 // import '/Users/abhi.mand/Desktop/Documents/ProgrammingProjects/personal_website/src/App.css';
 // Core
 import { makeStyles } from '@material-ui/core/styles'
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     mainMessage: {
         color: theme.palette.common.white,
         paddingTop: theme.spacing(30),
-        paddingBottom: theme.spacing(45),
+        paddingBottom: theme.spacing(50),
 
     },
     paperImage: {
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function Header(props) {
-    const {sections, title, mainMessage} = props;
+    const {title, mainMessage, image} = props; // removed sections
 
     const classes = useStyles();
     return (
@@ -47,7 +47,9 @@ export default function Header(props) {
                 <Paper className={classes.paperImage} 
                 variant="outlined"
                 square="true"
-                style={{    background: 'radial-gradient(circle, rgba(35,59,96,1) 0%, rgba(25,39,60,1) 100%)', 
+                // style={{    background: 'radial-gradient(circle, rgba(35,59,96,1) 0%, rgba(25,39,60,1) 100%)', 
+                style={{    backgroundImage: `url(${image})`, 
+
                             backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat',
                             backgroundPosition: 'center'}}>
